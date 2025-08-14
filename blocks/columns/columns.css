@@ -2,11 +2,14 @@
 .columns > div {
   display: flex;
   flex-direction: row;
-  align-items: stretch;
-  gap: 72px;
+  align-items: center;
+  gap: 6px;
   width: 100%;
   max-width: 1150px;
   margin: 0 auto;
+  padding: 0 4px;
+  min-height: 58px;
+  box-sizing: border-box;
 }
 
 .columns img {
@@ -40,7 +43,7 @@
 
 
 .columns {
-  background: #F4FDFE;
+  background: #fff;
   padding: 64px 0;
   font-family: "Proxima Nova", "Proxima Nova Fallback", sans-serif;
   box-sizing: border-box;
@@ -48,20 +51,22 @@
 
 .columns .columns-img-col {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-start;
-  min-width: 320px;
+  min-width: 120px;
   margin-right: 28px;
   flex: 0 0 43%;
   max-width: 440px;
+  padding: 0;
 }
 
 .columns .columns-img-col img {
   width: auto;
-  height: 38px;
+  height: auto;
   max-width: 150px;
   object-fit: contain;
   display: block;
+  max-height: 44px;
 }
 
 .columns > div > div:not(.columns-img-col) {
@@ -106,15 +111,16 @@
 }
 
 .columns a {
-  color: #1A3356;
+  color: #223554;
   text-decoration: none;
-  font-family: 'Proxima Nova', 'Proxima Nova Fallback', sans-serif;
-  font-size: 13px;
-  font-weight: 400;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
   letter-spacing: 0.01em;
   line-height: 1.3;
   transition: color 0.15s;
   white-space: nowrap;
+  border: none;
 }
 
 .columns a:hover {
@@ -753,7 +759,6 @@
   padding: 0;
 }
 
-/* Layout: two columns, side-by-side, top-aligned, tightly grouped */
 .columns.columns7.block > div {
   display: flex;
   flex-direction: row;
@@ -764,7 +769,6 @@
   margin: 0 auto;
 }
 
-/* Stack columns on mobile */
 @media (width <= 900px) {
   .columns.columns7.block > div {
     flex-direction: column;
@@ -772,7 +776,6 @@
   }
 }
 
-/* Left column: heading & subheading stacked vertically */
 .columns.columns7.block > div > div:first-child {
   display: flex;
   flex-direction: column;
@@ -783,7 +786,6 @@
   flex-shrink: 1;
 }
 
-/* Heading styles */
 .columns.columns7.block h4 {
   font-size: 22px;
   font-family: Arial, sans-serif;
@@ -794,7 +796,6 @@
   padding: 0;
 }
 
-/* Subheading/description styles */
 .columns.columns7.block p:not(.button-container) {
   font-size: 12px;
   color: #4d5a6d;
@@ -804,7 +805,6 @@
   padding: 0;
 }
 
-/* Right column: ensure button is horizontally grouped with heading */
 .columns.columns7.block > div > div:last-child {
   display: flex;
   flex-direction: column;
@@ -812,13 +812,12 @@
   justify-content: flex-start;
   min-width: 0;
   flex-shrink: 0;
-  margin-left: auto; /* push button to right, but in the same row */
+  margin-left: auto;
   margin-top: 0;
   padding: 0;
   height: auto;
 }
 
-/* On mobile, left-align button */
 @media (width <= 900px) {
   .columns.columns7.block > div > div:last-child {
     margin-left: 0;
@@ -826,13 +825,11 @@
   }
 }
 
-/* Remove any extra margin on the button container */
 .columns.columns7.block .button-container {
   margin: 0;
   padding: 0;
 }
 
-/* Button styling */
 .columns.columns7.block .button-container .button {
   display: inline-block;
   background: #092768;
@@ -850,4 +847,185 @@
   text-align: center;
   max-width: 100%;
   white-space: nowrap;
+}
+
+/* --- Main row: flex, perfect vertical centering, tighter gap --- */
+
+/* --- Logo column: center logo with nav block vertically --- */
+
+/* --- NAVIGATION BLOCK: force height and center vertically --- */
+.columns > div > div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  gap: 0;
+  min-width: 0;
+  height: 48px;
+  padding: 0;
+  margin: 0;
+}
+
+/* --- Ensure nav rows touch: no margin/padding --- */
+.columns > div > div:nth-child(2) > ul,
+.columns > div > div:nth-child(2) > ul li {
+  margin: 0;
+  padding: 0;
+}
+
+.columns > div > div:nth-child(2) > ul:first-of-type {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 0;
+  list-style: none;
+  height: 24px;
+}
+
+.columns > div > div:nth-child(2) > ul:first-of-type > li {
+  font-size: 14px;
+  color: #223554;
+  font-weight: 500;
+  line-height: 24px;
+  padding: 0 8px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  height: 24px;
+  white-space: nowrap;
+  border: none;
+}
+
+.columns > div > div:nth-child(2) > ul:first-of-type > li:not(:first-child) {
+  border-left: 1px solid #D8DDE6;
+  padding-left: 8px;
+}
+
+.columns > div > div:nth-child(2) > ul:first-of-type > li:last-child {
+  padding-right: 0;
+}
+
+/* --- Bottom nav row: horizontal flex, smaller/tighter, full height dividers --- */
+.columns > div > div:nth-child(2) > ul:last-of-type {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 0;
+  list-style: none;
+  height: 24px;
+}
+
+.columns > div > div:nth-child(2) > ul:last-of-type > li {
+  font-size: 12px;
+  color: #223554;
+  font-weight: 400;
+  line-height: 24px;
+  padding: 0 6px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  height: 24px;
+  white-space: nowrap;
+  border: none;
+}
+
+.columns > div > div:nth-child(2) > ul:last-of-type > li:not(:first-child) {
+  border-left: 1px solid #D8DDE6;
+  padding-left: 6px;
+}
+
+.columns > div > div:nth-child(2) > ul:last-of-type > li:last-child {
+  padding-right: 0;
+}
+
+/* --- Social icons in bottom row, if present --- */
+.columns > div > div:nth-child(2) > p {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0 0 0 8px;
+  padding: 0;
+  height: 24px;
+}
+
+.columns > div > div:nth-child(2) > p img {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #223554;
+  object-fit: cover;
+  display: block;
+}
+
+/* --- Rightmost column (third): align vertically with nav block --- */
+.columns > div > div:nth-child(3) {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+}
+
+.columns > div > div:nth-child(3) ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.columns > div > div:nth-child(3) ul li {
+  font-size: 12px;
+  color: #223554;
+  font-weight: 400;
+  line-height: 1.2;
+  padding: 2px 0;
+  white-space: nowrap;
+}
+
+/* --- Links styling --- */
+
+/* --- Remove bullets and default list spacing --- */
+.columns ul,
+.columns ul li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* --- Remove unwanted margin from p --- */
+
+/* --- Responsive stacking for <900px screens --- */
+@media (width <= 900px) {
+  .columns > div {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 0 2px;
+  }
+
+  .columns .columns-img-col {
+    min-width: 70px;
+  }
+
+  .columns > div > div:nth-child(2),
+  .columns > div > div:nth-child(3) {
+    width: 100%;
+    min-width: 0;
+    align-items: flex-start;
+  }
+
+  .columns > div > div:nth-child(2) > ul:first-of-type,
+  .columns > div > div:nth-child(2) > ul:last-of-type {
+    flex-wrap: wrap;
+    gap: 2px;
+  }
+
+  .columns > div > div:nth-child(2) > p {
+    margin-left: 0;
+    margin-top: 8px;
+  }
 }
