@@ -569,134 +569,6 @@
 }
 
 
-.columns.columns6 {
-  background: #f4fffb;
-  font-family: "Proxima Nova", "Proxima Nova Fallback", sans-serif;
-  padding: 0;
-}
-
-.columns.columns6 > div {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-  max-width: 1100px;
-  margin: 0 auto;
-  gap: 24px;
-  padding-top: 0.3em;
-  padding-bottom: 1em;
-}
-
-@media (width <= 900px) {
-  .columns.columns6 > div {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 20px;
-    padding-top: 0.2em;
-    padding-bottom: 0.6em;
-  }
-}
-
-.columns.columns6 > div > div:first-child {
-  flex: 0 1 460px;
-  max-width: 460px;
-  min-width: 220px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 0;
-}
-
-.columns.columns6 .columns-img-col {
-  flex: 0 0 340px;
-  max-width: 340px;
-  min-width: 180px;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-end;
-}
-
-.columns.columns6 .columns-img-col picture,
-.columns.columns6 .columns-img-col img {
-  width: 100%;
-  max-width: 340px;
-  border-radius: 16px;
-  height: auto;
-  object-fit: cover;
-  display: block;
-}
-
-@media (width <= 900px) {
-  .columns.columns6 .columns-img-col {
-    justify-content: center;
-    flex: 1 1 100%;
-    margin-top: 0.3em;
-    max-width: 100%;
-    min-width: 0;
-  }
-
-  .columns.columns6 .columns-img-col picture,
-  .columns.columns6 .columns-img-col img {
-    max-width: 90vw;
-    margin: 0 auto;
-  }
-
-  .columns.columns6 > div > div:first-child {
-    max-width: 100%;
-  }
-}
-
-.columns.columns6 h4 {
-  font-size: 1.62rem;
-  font-weight: 600;
-  color: #003d6a;
-  text-align: left;
-  margin: 0 0 0.10em;
-  line-height: 1.10;
-  letter-spacing: -0.01em;
-}
-
-.columns.columns6 h4 span,
-.columns.columns6 h4 strong {
-  color: #ef6645;
-  font-weight: 600;
-}
-
-.columns.columns6 > div > div:first-child > p:not(.button-container) {
-  font-size: 1rem;
-  color: #3a3a3a;
-  font-weight: 400;
-  text-align: left;
-  margin: 0 0 0.18em;
-  line-height: 1.28;
-}
-
-.columns.columns6 .button-container .button {
-  font-size: 1rem;
-  padding: 0.22em 0.95em;
-  border-radius: 5px;
-  border: 1.5px solid #003d6a;
-  color: #003d6a;
-  background: transparent;
-  font-weight: 600;
-  margin-top: 0.08em;
-  margin-bottom: 0;
-  transition: background 0.2s, color 0.2s;
-  text-align: center;
-  display: inline-block;
-}
-
-.columns.columns6 .button-container .button:hover,
-.columns.columns6 .button-container .button:focus {
-  background: #003d6a;
-  color: #fff;
-}
-
-.columns.columns6 > div > div:first-child > *:last-child {
-  margin-bottom: 0;
-}
-
-
 .columns.columns7.block {
   background: #fff;
   padding: 0;
@@ -1042,9 +914,6 @@
   }
 }
 
-/* Two-column layout: image left, content right */
-
-/* Responsive: stack vertically on mobile */
 @media (width <= 900px) {
   .columns > div {
     flex-direction: column;
@@ -1054,13 +923,6 @@
   }
 }
 
-/* Left column: large image (logo), top aligned */
-
-/* Right column: content as vertical stack */
-
-/* Remove navigation styling: display vertical list, no horizontal nav look */
-
-/* Headline styles: first visible list item or heading */
 .columns > div > div:not(.columns-img-col) ul:first-of-type li:first-child,
 .columns > div > div:not(.columns-img-col) > h1,
 .columns > div > div:not(.columns-img-col) > h2,
@@ -1074,7 +936,6 @@
   margin-bottom: 0.4em;
 }
 
-/* Multi-color headline span */
 .columns > div > div:not(.columns-img-col) ul:first-of-type li:first-child span,
 .columns > div > div:not(.columns-img-col) ul:first-of-type li:first-child strong,
 .columns > div > div:not(.columns-img-col) > h1 span,
@@ -1086,7 +947,6 @@
   color: #f26622;
 }
 
-/* Body/description styling: next paragraph or list item */
 .columns > div > div:not(.columns-img-col) p,
 .columns > div > div:not(.columns-img-col) ul:first-of-type li:not(:first-child) {
   font-size: 1.06rem;
@@ -1097,7 +957,6 @@
   margin-bottom: 0;
 }
 
-/* Button styling: visually prominent, pill shape */
 .columns > div > div:not(.columns-img-col) a.button,
 .columns > div > div:not(.columns-img-col) .button,
 .columns > div > div:not(.columns-img-col) button {
@@ -1124,7 +983,6 @@
   color: #f26622;
 }
 
-/* Footnote/disclaimer styling: small, gray, bottom of stack */
 .columns > div > div:not(.columns-img-col) > p:last-child,
 .columns > div > div:not(.columns-img-col) .footnote {
   font-size: 0.72rem;
@@ -1136,7 +994,6 @@
   text-align: left;
 }
 
-/* On mobile, keep stacking and left alignment */
 @media (width <= 900px) {
   .columns > div > div:not(.columns-img-col) {
     gap: 22px;
@@ -1146,8 +1003,144 @@
   }
 }
 
-/* Ensure vertical spacing in right column */
 .columns > div > div:not(.columns-img-col) > * {
   margin-left: 0;
   margin-right: 0;
+}
+
+
+.columns.columns6 {
+  background: #f3fcfa;
+  padding: 48px 0;
+  font-family: "Proxima Nova", "Proxima Nova Fallback", sans-serif;
+}
+
+/* Main row: Side by side, vertically centered */
+.columns.columns6 > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 1100px;
+  margin: 0 auto;
+  gap: 48px;
+  padding: 0 32px;
+  box-sizing: border-box;
+  min-height: 380px;
+}
+
+/* Left column: text content */
+.columns.columns6 > div > div:first-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 480px;
+  width: 100%;
+  min-width: 320px;
+  flex: 1 1 480px;
+  gap: 24px;
+}
+
+/* Headline and highlight */
+.columns.columns6 h4 {
+  color: #02335d;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1.22;
+  margin-bottom: 10px;
+}
+
+.columns.columns6 h4 span,
+.columns.columns6 h4 strong {
+  color: #e94f1d;
+  font-weight: 700;
+}
+
+/* Supporting paragraph */
+.columns.columns6 p:not(.button-container) {
+  color: #02335d;
+  font-size: 1.07rem;
+  line-height: 1.5;
+  font-weight: 400;
+  margin-bottom: 18px;
+}
+
+/* CTA button styles */
+.columns.columns6 .button-container .button {
+  border: 2px solid #02335d;
+  background: transparent;
+  color: #02335d;
+  font-size: 1.08rem;
+  font-weight: 600;
+  border-radius: 30px;
+  padding: 14px 44px;
+  transition: background 0.2s, color 0.2s;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 0;
+  display: inline-block;
+}
+
+.columns.columns6 .button-container .button:hover,
+.columns.columns6 .button-container .button:focus {
+  background: #02335d;
+  color: #fff;
+}
+
+/* Right column: image container and image (make image square and vertically centered) */
+.columns.columns6 .columns-img-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 340px;
+  min-height: 340px;
+  max-width: 340px;
+  max-height: 340px;
+  flex: 0 0 340px;
+}
+
+.columns.columns6 .columns-img-col img,
+.columns.columns6 .columns-img-col picture {
+  width: 340px;
+  height: 340px;
+  max-width: 100%;
+  max-height: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 20px;
+  display: block;
+  margin: 0;
+  box-shadow: none;
+}
+
+/* Responsive: stack columns and adjust image sizing on mobile */
+@media (width <= 900px) {
+  .columns.columns6 > div {
+    flex-direction: column;
+    gap: 32px;
+    padding: 0 12px;
+    min-height: unset;
+  }
+
+  .columns.columns6 .columns-img-col,
+  .columns.columns6 .columns-img-col img,
+  .columns.columns6 .columns-img-col picture {
+    min-width: 0;
+    min-height: 0;
+    max-width: 90vw;
+    width: 90vw;
+    height: auto;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .columns.columns6 .columns-img-col {
+    height: auto;
+  }
+
+  .columns.columns6 > div > div:first-child {
+    max-width: 100%;
+  }
 }
