@@ -2,14 +2,15 @@
 .columns > div {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  gap: 6px;
+  align-items: flex-start;
+  gap: 56px;
   width: 100%;
-  max-width: 1150px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 4px;
-  min-height: 58px;
+  padding: 0 32px;
+  min-height: 420px;
   box-sizing: border-box;
+  justify-content: center;
 }
 
 .columns img {
@@ -18,6 +19,8 @@
 
 .columns > div > div {
   order: 1;
+  border: none;
+  box-shadow: none;
 }
 
 .columns > div > .columns-img-col {
@@ -43,7 +46,7 @@
 
 
 .columns {
-  background: #fff;
+  background: #f3fcfc;
   padding: 64px 0;
   font-family: "Proxima Nova", "Proxima Nova Fallback", sans-serif;
   box-sizing: border-box;
@@ -51,13 +54,15 @@
 
 .columns .columns-img-col {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
-  min-width: 120px;
+  min-width: 320px;
   margin-right: 28px;
-  flex: 0 0 43%;
-  max-width: 440px;
+  flex: 0 0 44%;
+  max-width: 540px;
   padding: 0;
+  height: 100%;
+  margin-bottom: 0;
 }
 
 .columns .columns-img-col img {
@@ -70,39 +75,49 @@
 }
 
 .columns > div > div:not(.columns-img-col) {
-  flex: 1 1 0;
+  flex: 1 1 56%;
   display: flex;
   align-items: flex-start;
-  justify-content: center;
-  gap: 38px;
-  min-width: 0;
-  padding: 18px 0;
+  justify-content: flex-start;
+  gap: 32px;
+  min-width: 340px;
+  padding: 0;
   flex-direction: column;
   min-height: 340px;
   position: relative;
+  box-sizing: border-box;
 }
 
 .columns > div > div:not(.columns-img-col) ul {
   display: flex;
   flex-flow: row nowrap;
-  align-items: center;
-  gap: 0;
+  align-items: flex-start;
+  gap: 12px;
   margin: 0;
   padding: 0;
+  flex-direction: column;
+  border: none;
+  background: none;
+  list-style: none;
+  width: 100%;
 }
 
 .columns > div > div:not(.columns-img-col) ul li {
-  display: flex;
+  display: block;
   align-items: center;
-  font-size: 13px;
-  color: #1A3356;
+  font-size: inherit;
+  color: inherit;
   font-family: 'Proxima Nova', 'Proxima Nova Fallback', sans-serif;
   position: relative;
   line-height: 1.3;
-  white-space: nowrap;
-  padding: 0 20px;
+  white-space: normal;
+  padding: 0;
   border-left: 1px solid #e5e5e5;
   min-height: 34px;
+  border: none;
+  margin: 0;
+  background: none;
+  width: 100%;
 }
 
 .columns > div > div:not(.columns-img-col) ul li:first-child {
@@ -426,10 +441,13 @@
   height: auto;
   max-width: 420px;
   min-width: 220px;
-  border-radius: 10px;
+  border-radius: 0;
   margin: 0;
   background: none;
   display: block;
+  object-fit: contain;
+  box-shadow: none;
+  margin-bottom: 0;
 }
 
 .columns > div > div:not(.columns-img-col) > *:nth-child(n+4) {
@@ -947,13 +965,12 @@
   box-sizing: border-box;
 }
 
-/* Flex layout: center row, tighter group, allow group to size to content */
 .columns.columns12 > div {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 12px; /* make gap slightly tighter for better match */
+  gap: 12px;
   width: auto;
   max-width: none;
   margin: 0 auto;
@@ -963,7 +980,6 @@
   box-sizing: border-box;
 }
 
-/* Flex children: no stretching, remove all extra spacing */
 .columns.columns12 > div > div {
   flex: 0 0 auto;
   display: flex;
@@ -973,7 +989,6 @@
   min-width: 0;
 }
 
-/* No extra spacing in button container and p */
 .columns.columns12 .button-container,
 .columns.columns12 .button-container p {
   margin: 0;
@@ -982,7 +997,6 @@
   align-items: center;
 }
 
-/* Link style: plain text, font, color, no underline by default */
 .columns.columns12 a.button {
   font-family: 'Proxima Nova', 'Proxima Nova Fallback', Arial, sans-serif;
   font-size: 12px;
@@ -1002,7 +1016,6 @@
   transition: none;
 }
 
-/* Underline on hover for clarity */
 .columns.columns12 a.button:hover,
 .columns.columns12 a.button:focus {
   color: #000;
@@ -1011,7 +1024,6 @@
   border: none;
 }
 
-/* Remove all extra vertical spacing in the block as a whole */
 .columns.columns12,
 .columns.columns12 > div {
   margin-top: 0;
@@ -1020,7 +1032,6 @@
   padding-bottom: 0;
 }
 
-/* Responsive: stack vertically and reduce gap on small screens */
 @media (width <= 600px) {
   .columns.columns12 > div {
     flex-direction: column;
@@ -1029,4 +1040,114 @@
     width: 100vw;
     max-width: 100vw;
   }
+}
+
+/* Two-column layout: image left, content right */
+
+/* Responsive: stack vertically on mobile */
+@media (width <= 900px) {
+  .columns > div {
+    flex-direction: column;
+    padding: 0 8px;
+    gap: 40px;
+    min-height: unset;
+  }
+}
+
+/* Left column: large image (logo), top aligned */
+
+/* Right column: content as vertical stack */
+
+/* Remove navigation styling: display vertical list, no horizontal nav look */
+
+/* Headline styles: first visible list item or heading */
+.columns > div > div:not(.columns-img-col) ul:first-of-type li:first-child,
+.columns > div > div:not(.columns-img-col) > h1,
+.columns > div > div:not(.columns-img-col) > h2,
+.columns > div > div:not(.columns-img-col) > h3 {
+  font-size: 2.12rem;
+  font-weight: 700;
+  color: #26445a;
+  line-height: 1.18;
+  font-family: "Proxima Nova", "Proxima Nova Fallback", sans-serif;
+  text-align: left;
+  margin-bottom: 0.4em;
+}
+
+/* Multi-color headline span */
+.columns > div > div:not(.columns-img-col) ul:first-of-type li:first-child span,
+.columns > div > div:not(.columns-img-col) ul:first-of-type li:first-child strong,
+.columns > div > div:not(.columns-img-col) > h1 span,
+.columns > div > div:not(.columns-img-col) > h2 span,
+.columns > div > div:not(.columns-img-col) > h3 span,
+.columns > div > div:not(.columns-img-col) > h1 strong,
+.columns > div > div:not(.columns-img-col) > h2 strong,
+.columns > div > div:not(.columns-img-col) > h3 strong {
+  color: #f26622;
+}
+
+/* Body/description styling: next paragraph or list item */
+.columns > div > div:not(.columns-img-col) p,
+.columns > div > div:not(.columns-img-col) ul:first-of-type li:not(:first-child) {
+  font-size: 1.06rem;
+  color: #26445a;
+  line-height: 1.62;
+  font-weight: 400;
+  text-align: left;
+  margin-bottom: 0;
+}
+
+/* Button styling: visually prominent, pill shape */
+.columns > div > div:not(.columns-img-col) a.button,
+.columns > div > div:not(.columns-img-col) .button,
+.columns > div > div:not(.columns-img-col) button {
+  display: inline-block;
+  padding: 16px 42px;
+  background: #fff;
+  color: #26445a;
+  border: 2px solid #26445a;
+  border-radius: 999px;
+  font-size: 1.16rem;
+  font-weight: 500;
+  line-height: 1.32;
+  margin: 0;
+  text-decoration: none;
+  transition: border-color .2s, background-color .2s, color .2s;
+  cursor: pointer;
+}
+
+.columns > div > div:not(.columns-img-col) a.button:hover,
+.columns > div > div:not(.columns-img-col) .button:hover,
+.columns > div > div:not(.columns-img-col) button:hover {
+  border-color: #f26622;
+  background: #f3fcfc;
+  color: #f26622;
+}
+
+/* Footnote/disclaimer styling: small, gray, bottom of stack */
+.columns > div > div:not(.columns-img-col) > p:last-child,
+.columns > div > div:not(.columns-img-col) .footnote {
+  font-size: 0.72rem;
+  color: #697789;
+  margin-top: 20px;
+  line-height: 1.4;
+  letter-spacing: 0.01em;
+  font-weight: 400;
+  text-align: left;
+}
+
+/* On mobile, keep stacking and left alignment */
+@media (width <= 900px) {
+  .columns > div > div:not(.columns-img-col) {
+    gap: 22px;
+    align-items: flex-start;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+/* Ensure vertical spacing in right column */
+.columns > div > div:not(.columns-img-col) > * {
+  margin-left: 0;
+  margin-right: 0;
 }
