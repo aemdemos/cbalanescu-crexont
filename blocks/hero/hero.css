@@ -47,198 +47,6 @@
   }
 }
 
-.hero.hero2 {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  width: 100vw;
-  min-height: 540px;
-  margin-left: 50%;
-  transform: translateX(-50%);
-  background:
-    linear-gradient(90deg, #002b67 0%, #003763e0 13%, rgb(0 43 103 / 8%) 38%, transparent 53%),
-    url('your-image.jpg') center center/cover no-repeat;
-  box-sizing: border-box;
-  overflow: hidden;
-}
-
-.hero.hero2 > div:first-child {
-  flex: 0 0 0;
-  position: relative;
-  min-width: 0;
-  z-index: 3;
-}
-
-.hero.hero2 > div:first-child > div {
-  position: absolute;
-  right: 5vw;
-  bottom: 9vw;
-  background: #002b67;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 7px;
-  font-size: 1rem;
-  font-weight: 600;
-  box-shadow: 0 2px 8px rgb(0 0 0 / 14%);
-  min-width: 170px;
-  max-width: 250px;
-  line-height: 1.3;
-  pointer-events: auto;
-  z-index: 5;
-}
-
-.hero.hero2 > div:last-child {
-  flex: 1 1 56vw;
-  min-width: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  z-index: 4;
-}
-
-.hero.hero2 > div:last-child > div {
-  max-width: 420px;
-  margin: 36px 0 0 1.6vw;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-
-.hero.hero2 p,
-.hero.hero2 h1,
-.hero.hero2 h2,
-.hero.hero2 h3,
-.hero.hero2 h4,
-.hero.hero2 h5,
-.hero.hero2 h6 {
-  color: #fff;
-  margin: 0 0 0.5em;
-  font-family: var(--heading-font-family);
-  position: relative;
-  z-index: 6;
-}
-
-.hero.hero2 p strong,
-.hero.hero2 p b {
-  color: #cee366;
-  font-weight: 700;
-}
-
-.hero.hero2 > div:last-child > div > p:nth-child(3) {
-  font-size: 2.18rem;
-  line-height: 2.45rem;
-  font-weight: 700;
-  margin-bottom: 0.18em;
-  margin-top: 0.1em;
-  color: #fff;
-  letter-spacing: -0.5px;
-}
-
-.hero.hero2 > div:last-child > div > p:nth-child(4) {
-  color: #7ccdf3;
-  font-size: 0.97rem;
-  line-height: 1.22rem;
-  margin-bottom: 0.22em;
-}
-
-.hero.hero2 > div:last-child > div > p:nth-child(5),
-.hero.hero2 > div:last-child > div > p:nth-child(6) {
-  color: #a7d1e6;
-  font-size: 0.89rem;
-  line-height: 1.04rem;
-  margin-bottom: 0.11em;
-}
-
-.hero.hero2 > div:last-child > div > p:last-child {
-  display: inline-block;
-  margin-top: 0.85em;
-  background: transparent;
-  border: 2px solid #fff;
-  border-radius: 18px;
-  color: #fff;
-  padding: 8px 22px;
-  font-size: 0.98rem;
-  font-weight: 600;
-  letter-spacing: 0.01em;
-  text-align: center;
-  cursor: pointer;
-  transition: background 0.18s, color 0.18s;
-}
-
-.hero.hero2 > div:last-child > div > p:last-child:hover {
-  background: #fff;
-  color: #002b67;
-}
-
-.hero.hero2 > div:last-child > div > p:first-child {
-  display: none;
-}
-
-.hero.hero2 picture,
-.hero.hero2 img {
-  display: none;
-}
-
-@media (width <= 1200px) {
-  .hero.hero2 > div:last-child > div {
-    margin-left: 1vw;
-    max-width: 94vw;
-  }
-
-  .hero.hero2 > div:first-child > div {
-    right: 2vw;
-    bottom: 6vw;
-    font-size: 0.92rem;
-    min-width: 120px;
-    padding: 8px 12px;
-  }
-}
-
-@media (width <= 900px) {
-  .hero.hero2 {
-    flex-direction: column;
-    min-height: 390px;
-    background:
-      linear-gradient(180deg, #002b67 24%, rgb(0 43 103 / 66%) 59%, transparent 100%),
-      url('your-image.jpg') center center/cover no-repeat;
-    align-items: flex-start;
-  }
-
-  .hero.hero2 > div:first-child {
-    display: none;
-  }
-
-  .hero.hero2 > div:last-child > div {
-    margin: 12px 3vw 8px;
-    max-width: 99vw;
-    align-items: flex-start;
-  }
-}
-
-@media (width <= 700px) {
-  .hero.hero2 {
-    min-height: 230px;
-    padding: 0;
-  }
-
-  .hero.hero2 > div:last-child > div {
-    margin: 6px 1.5vw;
-    max-width: 100vw;
-  }
-
-  .hero.hero2 > div:last-child > div > p:nth-child(3) {
-    font-size: 0.97rem;
-    line-height: 1.12rem;
-  }
-
-  .hero.hero2 > div:last-child > div > p:nth-child(4) {
-    font-size: 0.81rem;
-    line-height: 0.98rem;
-  }
-}
-
 
 .hero.hero3 {
   width: 100%;
@@ -252,14 +60,12 @@
   min-height: unset;
 }
 
-/* Keep both hero children visible and avoid collapse */
 .hero.hero3 > div {
   flex: 0 1 auto;
   min-width: 0;
   display: block;
 }
 
-/* Center the content and allow maximum horizontal expansion */
 .hero.hero3 > div:last-child {
   width: 100%;
   display: flex;
@@ -267,7 +73,6 @@
   align-items: center;
 }
 
-/* Inner wrapper for headline: fill available width and prevent wrapping */
 .hero.hero3 > div:last-child > div {
   width: 100vw;
   max-width: 100vw;
@@ -277,7 +82,6 @@
   align-items: center;
 }
 
-/* Headline: force single line, centered, and no overflow/wrap */
 .hero.hero3 h3 {
   font-family: 'Proxima Nova', 'Proxima Nova Fallback', Arial, Helvetica, sans-serif;
   font-size: 28px;
@@ -294,7 +98,6 @@
   text-overflow: ellipsis;
 }
 
-/* Responsive: allow wrapping on very small screens */
 @media (width <= 900px) {
   .hero.hero3 > div:last-child > div {
     max-width: 100vw;
@@ -310,8 +113,258 @@
   }
 }
 
-/* Highlight for "Good On" if a span is present */
 .hero.hero3 h3 span {
   color: #F60;
   font-weight: 600;
+}
+
+
+.hero.hero2 {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100vw;
+  min-height: 570px;
+  position: relative;
+  background-image:
+    linear-gradient(90deg, #183a53 0%, rgb(24 58 83 / 93%) 31%, rgb(24 58 83 / 19%) 54%, rgb(0 0 0 / 0%) 62%),
+    url('your-background-image.jpg');
+  background-size: cover;
+  background-position: center top;
+  overflow: hidden;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/* Callout box absolutely positioned at lower right */
+.hero.hero2 > div:first-child {
+  position: static;
+  flex: 0 0 auto;
+  width: 0;
+  min-width: 0;
+  max-width: 0;
+  pointer-events: none;
+}
+
+.hero.hero2 > div:first-child > div {
+  position: absolute;
+  right: 64px;
+  bottom: 48px;
+  background: #002B67;
+  color: #fff;
+  padding: 12px 22px 10px 18px;
+  border-radius: 13px;
+  font-size: 17px;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgb(0 43 103 / 16%);
+  min-width: 140px;
+  max-width: 235px;
+  line-height: 1.23;
+  z-index: 12;
+  display: block;
+  pointer-events: auto;
+  width: auto;
+}
+
+/* Main text column */
+.hero.hero2 > div:last-child {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 0;
+  min-height: 0;
+  height: 100%;
+  position: relative;
+}
+
+/* Vertically center text stack within the gradient overlay */
+.hero.hero2 > div:last-child > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 520px;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  padding: 52px 12px 44px 76px;
+}
+
+/* Headline/text/cta spacing and align */
+.hero.hero2 > div:last-child > div > p {
+  text-align: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* Subheadline */
+.hero.hero2 > div:last-child > div > p:nth-child(2) {
+  color: #a6d7f7;
+  font-size: 17px;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 26px;
+  letter-spacing: 0.01em;
+}
+
+/* Headline */
+.hero.hero2 > div:last-child > div > p:nth-child(3) {
+  font-size: 46px;
+  line-height: 1.09;
+  color: #fff;
+  font-weight: 300;
+  margin-bottom: 32px;
+  margin-top: 0;
+  word-break: keep-all;
+
+  /* Prevent awkward wrapping of bold spans */
+}
+
+.hero.hero2 > div:last-child > div > p:nth-child(3) strong {
+  color: #d7e788;
+  font-weight: 700;
+  word-break: keep-all;
+}
+
+/* Support text */
+.hero.hero2 > div:last-child > div > p:nth-child(4) {
+  font-size: 21px;
+  color: #d6eefa;
+  line-height: 1.34;
+  font-weight: 400;
+  margin-bottom: 18px;
+  max-width: 500px;
+}
+
+/* Footnotes */
+.hero.hero2 > div:last-child > div > p:nth-child(5),
+.hero.hero2 > div:last-child > div > p:nth-child(6) {
+  font-size: 13px;
+  color: #d6eefa;
+  line-height: 1.22;
+  margin-bottom: 7px;
+  max-width: 480px;
+}
+
+/* Hide duplicate callout in text stack */
+.hero.hero2 > div:last-child > div > p:first-child {
+  display: none;
+}
+
+/* CTA link styling and spacing */
+.hero.hero2 > div:last-child > div > p:last-child {
+  font-size: 19px;
+  color: #fff;
+  font-weight: 400;
+  margin-top: 38px;
+  margin-bottom: 0;
+  text-decoration: underline;
+  display: inline-block;
+  text-align: left;
+  background: none;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  letter-spacing: 0.01em;
+  transition: color 0.18s;
+}
+
+.hero.hero2 > div:last-child > div > p:last-child:hover {
+  color: #d7e788;
+  text-decoration: underline;
+}
+
+/* Hide any inline images or arrow icons in last p */
+.hero.hero2 > div:last-child > div > p:last-child picture,
+.hero.hero2 > div:last-child > div > p:last-child img {
+  display: none;
+}
+
+/* Hide extraneous images */
+.hero.hero2 picture,
+.hero.hero2 img {
+  display: none;
+}
+
+/* Remove any empty artifacts */
+.hero.hero2 > div:first-child > div:empty,
+.hero.hero2 > div:last-child > div > p:empty {
+  display: none;
+}
+
+/* Responsive styles for tablets and phones */
+@media (width <= 1000px) {
+  .hero.hero2 {
+    flex-direction: column;
+    min-height: 360px;
+    background-position: right top;
+  }
+
+  .hero.hero2 > div:first-child > div {
+    right: 10px;
+    bottom: 10px;
+    font-size: 13px;
+    padding: 7px 12px 6px 10px;
+    max-width: 110px;
+    border-radius: 7px;
+  }
+
+  .hero.hero2 > div:last-child > div {
+    padding: 32px 7px 24px 13px;
+    max-width: 95vw;
+  }
+
+  .hero.hero2 > div:last-child > div > p:nth-child(3) {
+    font-size: 24px;
+    margin-bottom: 14px;
+  }
+
+  .hero.hero2 > div:last-child > div > p:nth-child(4) {
+    font-size: 13px;
+    margin-bottom: 8px;
+  }
+
+  .hero.hero2 > div:last-child > div > p:last-child {
+    font-size: 13px;
+    margin-top: 13px;
+  }
+}
+
+@media (width <= 700px) {
+  .hero.hero2 {
+    min-height: 160px;
+    padding: 0;
+    background-position: right top;
+  }
+
+  .hero.hero2 > div:first-child > div {
+    right: 2px;
+    bottom: 2px;
+    font-size: 10px;
+    padding: 4px 7px;
+    border-radius: 5px;
+    max-width: 75px;
+  }
+
+  .hero.hero2 > div:last-child > div {
+    padding: 18px 5px 12px;
+    max-width: 100vw;
+  }
+
+  .hero.hero2 > div:last-child > div > p:nth-child(3) {
+    font-size: 13px;
+    margin-bottom: 3px;
+  }
+
+  .hero.hero2 > div:last-child > div > p:nth-child(4) {
+    font-size: 9px;
+  }
+
+  .hero.hero2 > div:last-child > div > p:last-child {
+    font-size: 10px;
+    margin-top: 7px;
+  }
 }
