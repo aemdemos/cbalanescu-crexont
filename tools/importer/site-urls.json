@@ -1,0 +1,18 @@
+{
+  "originUrl": "https://crexont.com",
+  "aborted": false,
+  "urls": [
+    {
+      "url": "https://crexont.com/",
+      "source": "MANUAL",
+      "targetPath": "/",
+      "id": "751205e1740f50ec30343e496129d05c4e5a94fb"
+    }
+  ],
+  "crawlOptions": {
+    "strategy": "manual",
+    "strategiesAttempted": [
+      "MANUAL"
+    ]
+  }
+}
