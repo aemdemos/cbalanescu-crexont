@@ -1,3 +1,4 @@
+/* stylelint-disable no-descending-specificity */
 .columns > div {
   display: flex;
   flex-direction: column;
@@ -29,5 +30,154 @@
   .columns > div > div {
     flex: 1;
     order: unset;
+  }
+}
+
+
+.columns.columns1 {
+  background: #fff;
+  box-shadow: 0 2px 6px rgb(60 72 100 / 5%);
+  border-bottom: 1px solid #e0e4f0;
+  font-family: "Proxima Nova", "Proxima Nova Fallback", sans-serif;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.columns.columns1 > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  min-height: 70px;
+  padding: 0 36px;
+  gap: 36px;
+}
+
+/* --- LOGO COLUMN --- */
+.columns.columns1 .columns-img-col {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 120px;
+  margin-right: 16px;
+}
+
+.columns.columns1 .columns-img-col img {
+  max-width: 120px;
+  width: auto;
+  height: auto;
+  display: block;
+}
+
+/* --- NAVIGATION COLUMN --- */
+.columns.columns1 > div > div:not(.columns-img-col) {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+/* --- SHOW ONLY THE FIRST UL NAV ROW --- */
+.columns.columns1 > div > div:not(.columns-img-col) > ul:first-of-type {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  flex: 1 1 0;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.columns.columns1 > div > div:not(.columns-img-col) > ul:nth-of-type(n+2),
+.columns.columns1 > div > div:not(.columns-img-col) > p,
+.columns.columns1 > div > div:not(.columns-img-col) > picture {
+  display: none;
+}
+
+/* --- NAV LINKS --- */
+.columns.columns1 > div > div:not(.columns-img-col) > ul:first-of-type > li {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.columns.columns1 > div > div:not(.columns-img-col) > ul:first-of-type > li > a {
+  font-size: 13px;
+  color: #444C5C;
+  font-family: inherit;
+  font-weight: 400;
+  text-decoration: none;
+  padding: 0 2px;
+  white-space: nowrap;
+  line-height: 1.4;
+  transition: color 0.2s;
+  border-radius: 2px;
+  display: inline-block;
+}
+
+/* Button styling for "Stay updated" */
+.columns.columns1 > div > div:not(.columns-img-col) > ul:first-of-type > li > a[href*="stay-updated"] {
+  border: 1px solid #132A4A;
+  border-radius: 24px;
+  padding: 7px 22px;
+  color: #132A4A;
+  background: #fff;
+  font-weight: 500;
+  margin-left: 10px;
+  transition: background 0.2s, color 0.2s;
+  white-space: nowrap;
+  box-sizing: border-box;
+  line-height: 1.4;
+}
+
+.columns.columns1 > div > div:not(.columns-img-col) > ul:first-of-type > li > a[href*="stay-updated"]:hover {
+  background: #f6fafc;
+  color: #0d1b3d;
+}
+
+/* Prevent link breaking/wrapping mid-word */
+.columns.columns1 li > a {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Make nav fill all available horizontal space and distribute links */
+
+/* Responsive: stack vertically on mobile */
+@media (width <= 899px) {
+  .columns.columns1 > div {
+    flex-direction: column;
+    gap: 10px;
+    min-height: unset;
+    padding: 0 10px;
+  }
+
+  .columns.columns1 .columns-img-col {
+    justify-content: center;
+    margin: 12px 0 8px;
+  }
+
+  .columns.columns1 > div > div:not(.columns-img-col) {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .columns.columns1 > div > div:not(.columns-img-col) > ul:first-of-type {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .columns.columns1 > div > div:not(.columns-img-col) > ul:first-of-type > li > a[href*="stay-updated"] {
+    margin-left: 0;
+    margin-top: 8px;
   }
 }
