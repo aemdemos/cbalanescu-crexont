@@ -626,7 +626,6 @@
   padding: 0;
 }
 
-/* Layout: two columns, tighter gap, align items to top */
 .columns.columns6 > div {
   display: flex;
   flex-direction: row;
@@ -639,7 +638,6 @@
   padding-bottom: 1em;
 }
 
-/* Responsive: stack columns vertically on small screens */
 @media (width <= 900px) {
   .columns.columns6 > div {
     flex-direction: column;
@@ -650,7 +648,6 @@
   }
 }
 
-/* Left column: text block, more compact width */
 .columns.columns6 > div > div:first-child {
   flex: 0 1 460px;
   max-width: 460px;
@@ -661,7 +658,6 @@
   padding: 0;
 }
 
-/* Right column: fixed image width, don't stretch */
 .columns.columns6 .columns-img-col {
   flex: 0 0 340px;
   max-width: 340px;
@@ -671,7 +667,6 @@
   justify-content: flex-end;
 }
 
-/* Image: rounded corners, size, responsive */
 .columns.columns6 .columns-img-col picture,
 .columns.columns6 .columns-img-col img {
   width: 100%;
@@ -702,7 +697,6 @@
   }
 }
 
-/* Headline styling: compact, tight stack */
 .columns.columns6 h4 {
   font-size: 1.62rem;
   font-weight: 600;
@@ -713,14 +707,12 @@
   letter-spacing: -0.01em;
 }
 
-/* Highlighted phrase in headline (if span/strong present) */
 .columns.columns6 h4 span,
 .columns.columns6 h4 strong {
   color: #ef6645;
   font-weight: 600;
 }
 
-/* Supporting paragraph: compact, no excess margin */
 .columns.columns6 > div > div:first-child > p:not(.button-container) {
   font-size: 1rem;
   color: #3a3a3a;
@@ -730,7 +722,6 @@
   line-height: 1.28;
 }
 
-/* Call-to-action button: compact, less margin, less radius */
 .columns.columns6 .button-container .button {
   font-size: 1rem;
   padding: 0.22em 0.95em;
@@ -752,7 +743,111 @@
   color: #fff;
 }
 
-/* Remove extra margin on last child for tight stack */
 .columns.columns6 > div > div:first-child > *:last-child {
   margin-bottom: 0;
+}
+
+
+.columns.columns7.block {
+  background: #fff;
+  padding: 0;
+}
+
+/* Layout: two columns, side-by-side, top-aligned, tightly grouped */
+.columns.columns7.block > div {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 64px;
+  width: 100%;
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+/* Stack columns on mobile */
+@media (width <= 900px) {
+  .columns.columns7.block > div {
+    flex-direction: column;
+    gap: 32px;
+  }
+}
+
+/* Left column: heading & subheading stacked vertically */
+.columns.columns7.block > div > div:first-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 4px;
+  min-width: 0;
+  flex-shrink: 1;
+}
+
+/* Heading styles */
+.columns.columns7.block h4 {
+  font-size: 22px;
+  font-family: Arial, sans-serif;
+  font-weight: normal;
+  color: #183062;
+  margin: 0;
+  line-height: 1.2;
+  padding: 0;
+}
+
+/* Subheading/description styles */
+.columns.columns7.block p:not(.button-container) {
+  font-size: 12px;
+  color: #4d5a6d;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.4;
+  padding: 0;
+}
+
+/* Right column: ensure button is horizontally grouped with heading */
+.columns.columns7.block > div > div:last-child {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  min-width: 0;
+  flex-shrink: 0;
+  margin-left: auto; /* push button to right, but in the same row */
+  margin-top: 0;
+  padding: 0;
+  height: auto;
+}
+
+/* On mobile, left-align button */
+@media (width <= 900px) {
+  .columns.columns7.block > div > div:last-child {
+    margin-left: 0;
+    align-items: flex-start;
+  }
+}
+
+/* Remove any extra margin on the button container */
+.columns.columns7.block .button-container {
+  margin: 0;
+  padding: 0;
+}
+
+/* Button styling */
+.columns.columns7.block .button-container .button {
+  display: inline-block;
+  background: #092768;
+  color: #fff;
+  font-size: 13px;
+  font-family: Arial, sans-serif;
+  font-weight: normal;
+  border: none;
+  border-radius: 24px;
+  padding: 7px 24px;
+  box-shadow: none;
+  margin: 0;
+  line-height: 1.2;
+  vertical-align: top;
+  text-align: center;
+  max-width: 100%;
+  white-space: nowrap;
 }
