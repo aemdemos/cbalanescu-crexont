@@ -1,0 +1,581 @@
+{
+  "fragments": [
+    {
+      "name": "nav",
+      "path": "/nav",
+      "totalBoxes": 1,
+      "instances": [
+        {
+          "url": "https://crexont.com/",
+          "urlHash": "751205e1740f50ec30343e496129d05c4e5a94fb",
+          "uuid": "751205e1-00-70928af0e9d7f0ac1f13f2d60f543d2cf08783dd",
+          "xpath": "/html[1]/body[1]/header[1]/div[1]",
+          "differences": [
+            {
+              "element_id": "html__body__header__div",
+              "differences": [
+                {
+                  "change_type": "deletion",
+                  "text": "By continuing to use this site, you agree to our use of cookies as described in our Cookie Policy ."
+                }
+              ],
+              "dissimilarity_score": 1.0
+            }
+          ],
+          "similarity_score": 0.0
+        }
+      ],
+      "styles": {
+        "height": 39,
+        "background": "rgb(17, 36, 71) none repeat scroll 0% 0% / auto padding-box border-box"
+      }
+    },
+    {
+      "name": "footer",
+      "path": "/footer",
+      "totalBoxes": 1,
+      "instances": [
+        {
+          "url": "https://crexont.com/",
+          "urlHash": "751205e1740f50ec30343e496129d05c4e5a94fb",
+          "uuid": "751205e1-26-09bc5b3870cd6f656e88e4daee23300cff7bef28",
+          "xpath": "/html[1]/body[1]/div[2]/div[3]/div[1]/div[3]",
+          "differences": [
+            {
+              "element_id": "html__body__div_2__div_3__div__div_3",
+              "differences": [
+                {
+                  "change_type": "equal",
+                  "text": "CREXONT\u00ae is a registered trademark of Amneal Pharmaceuticals LLC. \u00a9 2025 Amneal Pharmaceuticals LLC. Distributed by Amneal Specialty, a division of Amneal Pharmaceuticals LLC. All rights reserved. PP-IPX203-US-0026 06/2025 This is intended for residents of the United States only. Any product discussed herein may have different product labeling in different countries. Please read the full Prescribing Information and discuss it with your doctor or healthcare professional."
+                }
+              ],
+              "dissimilarity_score": 0.0
+            }
+          ],
+          "similarity_score": 0.0
+        }
+      ],
+      "styles": {}
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Columns",
+      "cluster": 1,
+      "source": "Columns",
+      "target": "Columns (columns1)",
+      "key": "columns1",
+      "instances": [
+        {
+          "url": "https://crexont.com/",
+          "urlHash": "751205e1740f50ec30343e496129d05c4e5a94fb",
+          "uuid": "751205e1-01-041eb8ef6e3698f737a6f287ffb2cd6bf4bd4fa6",
+          "xpath": "/html[1]/body[1]/header[1]/div[3]",
+          "differences": [
+            {
+              "element_id": "html__body__header__div_3",
+              "differences": [
+                {
+                  "change_type": "equal",
+                  "text": "About \u201cGood On\u201d time How CREXONT works Starting CREXONT Safety Support & resources CREXONT stories Stay updated Important Safety Information Full Prescribing Information For Healthcare Providers Stay updated Menu About \u201cGood On\u201d time How CREXONT works Starting CREXONT Safety Support & resources CREXONT stories Stay updated Important Safety Information Full Prescribing Information For Healthcare Providers Stay updated Important Safety Information Full Prescribing Information For Healthcare Providers Stay updated Important Safety Information Full Prescribing Information For Healthcare Providers Stay updated About \u201cGood On\u201d time How CREXONT works Starting CREXONT Safety Support & resources CREXONT stories About \u201cGood On\u201d time How CREXONT works Starting CREXONT Safety Support & resources CREXONT stories"
+                }
+              ],
+              "dissimilarity_score": -0.0
+            }
+          ],
+          "similarity_score": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Hero",
+      "cluster": 2,
+      "source": "Hero",
+      "target": "Hero (hero2)",
+      "key": "hero2",
+      "instances": [
+        {
+          "url": "https://crexont.com/",
+          "urlHash": "751205e1740f50ec30343e496129d05c4e5a94fb",
+          "uuid": "751205e1-03-51c9eecaa4f487a675ad9fb7361498d9052d1fac",
+          "xpath": "/html[1]/body[1]/div[1]/div[3]",
+          "section": "section-2",
+          "differences": [
+            {
+              "element_id": "html__body__div__div_3",
+              "differences": [
+                {
+                  "change_type": "equal",
+                  "text": "David, a real person with Parkinson\u2019s disease For adults with Parkinson\u2019s disease (PD) From lunch to leash to lake Stay in step with your day with CREXONT: More \u201cGood On\u201d time* with less frequent dosing compared with immediate-release carbidopa/levodopa (IR CD/LD)\u2020 *\u201cGood On\u201d time is defined as \u201cOn\u201d time without troublesome dyskinesia. \u2020As seen in a clinical study. Take your next step"
+                }
+              ],
+              "dissimilarity_score": -0.0
+            }
+          ],
+          "similarity_score": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Hero",
+      "cluster": 3,
+      "source": "Hero",
+      "target": "Hero (hero3)",
+      "key": "hero3",
+      "instances": [
+        {
+          "url": "https://crexont.com/",
+          "urlHash": "751205e1740f50ec30343e496129d05c4e5a94fb",
+          "uuid": "751205e1-04-16321aaf3743d969cbaf39c70c3ff09ca48b29e1",
+          "xpath": "/html[1]/body[1]/div[1]/div[4]/div[1]",
+          "differences": [
+            {
+              "element_id": "html__body__div__div_4__div",
+              "differences": [
+                {
+                  "change_type": "equal",
+                  "text": "More \u201cGood On\u201d time* with less frequent dosing compared to IR CD/LD"
+                }
+              ],
+              "dissimilarity_score": -0.0
+            }
+          ],
+          "similarity_score": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Cards",
+      "cluster": 4,
+      "source": "Cards",
+      "target": "Cards (cards4)",
+      "key": "cards4",
+      "instances": [
+        {
+          "url": "https://crexont.com/",
+          "urlHash": "751205e1740f50ec30343e496129d05c4e5a94fb",
+          "uuid": "751205e1-06-b76d2a8e36dca38b26f064c73c92b8f170fb08c2",
+          "xpath": "/html[1]/body[1]/div[1]/div[4]/div[3]",
+          "differences": [
+            {
+              "element_id": "html__body__div__div_4__div_3",
+              "differences": [
+                {
+                  "change_type": "equal",
+                  "text": "Designed to gradually release levodopa CREXONT is designed to gradually release levodopa in the part of the gut where it is best absorbed, although the exact site and duration of absorption is unknown More \u201cGood On\u201d time"
+                },
+                {
+                  "change_type": "deletion",
+                  "text": "* \u2021 "
+                },
+                {
+                  "change_type": "insertion",
+                  "text": "*\u2021 "
+                },
+                {
+                  "change_type": "equal",
+                  "text": "People who took CREXONT an average of 3 times a day achieved 30 minutes more \u201cGood On\u201d time per day than those taking IR CD/LD an average of 5 times a day Personalized dosing CREXONT dosing starts at 3 times per day for most patients, though dosing may start at 2 to 3 times per day. After 1 to 3 days, your doctor may adjust your dose or frequency. CREXONT may be dosed up to 4 times a day"
+                }
+              ],
+              "dissimilarity_score": -0.0
+            }
+          ],
+          "similarity_score": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Columns",
+      "cluster": 5,
+      "source": "Columns",
+      "target": "Columns (columns5)",
+      "key": "columns5",
+      "instances": [
+        {
+          "url": "https://crexont.com/",
+          "urlHash": "751205e1740f50ec30343e496129d05c4e5a94fb",
+          "uuid": "751205e1-07-0f1d7f5df3d5be3c797f8c344329fe6d7acc6cbe",
+          "xpath": "/html[1]/body[1]/div[1]/div[5]",
+          "differences": [
+            {
+              "element_id": "html__body__div__div_5",
+              "differences": [
+                {
+                  "change_type": "deletion",
+                  "text": "Play Video CREXONT has transformed innovation into duration For the first time in Parkinson\u2019s disease, an oral therapy was designed to target where levodopa is best absorbed\u2014the proximal small intestine\u2014making CREXONT the oral CD/LD formulation with the longest-lasting LD plasma levels. \u2020\u2021 Discover how it works \u2020 Exact site and duration of absorption are unknown. \u2021 In a clinical pharmacology study, the duration of levodopa levels was defined by how long the levels of CREXONT, RYTARY, and IR CD/LD were maintained in the blood above half the maximum concentration."
+                }
+              ],
+              "dissimilarity_score": 1.0
+            }
+          ],
+          "similarity_score": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Columns",
+      "cluster": 6,
+      "source": "Columns",
+      "target": "Columns (columns6)",
+      "key": "columns6",
+      "instances": [
+        {
+          "url": "https://crexont.com/",
+          "urlHash": "751205e1740f50ec30343e496129d05c4e5a94fb",
+          "uuid": "751205e1-08-4eabbda5311e71fa12ce80cd0e2687c8b4743c67",
+          "xpath": "/html[1]/body[1]/div[1]/div[6]",
+          "section": "section-3",
+          "differences": [
+            {
+              "element_id": "html__body__div__div_6",
+              "differences": [
+                {
+                  "change_type": "equal",
+                  "text": "Are you optimizing your \u201cGood On\u201d time* with your current Parkinson\u2019s disease treatment? IR CD/LD has been the standard of care for treating PD for many years\u2014it\u2019s designed to work quickly but may wear off quickly too. About \u201cGood On\u201d time"
+                }
+              ],
+              "dissimilarity_score": -0.0
+            }
+          ],
+          "similarity_score": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Columns",
+      "cluster": 7,
+      "source": "Columns",
+      "target": "Columns (columns7)",
+      "key": "columns7",
+      "instances": [
+        {
+          "url": "https://crexont.com/",
+          "urlHash": "751205e1740f50ec30343e496129d05c4e5a94fb",
+          "uuid": "751205e1-09-b65150cde6e25cc6c562a07d65b436311d0d5740",
+          "xpath": "/html[1]/body[1]/div[1]/div[7]/div[1]/div[1]",
+          "differences": [
+            {
+              "element_id": "html__body__div__div_7__div__div",
+              "differences": [
+                {
+                  "change_type": "equal",
+                  "text": "See real stories from real people Learn how CREXONT helps people who are living with Parkinson\u2019s disease. CREXONT Stories"
+                }
+              ],
+              "dissimilarity_score": 0.0
+            }
+          ],
+          "similarity_score": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Cards",
+      "cluster": 8,
+      "source": "Cards",
+      "target": "Cards (cards8)",
+      "key": "cards8",
+      "instances": [
+        {
+          "url": "https://crexont.com/",
+          "urlHash": "751205e1740f50ec30343e496129d05c4e5a94fb",
+          "uuid": "751205e1-10-6fd02926802f1e1c3a35be39ad54cfd87610b999",
+          "xpath": "/html[1]/body[1]/div[1]/div[7]/div[1]/div[2]",
+          "differences": [
+            {
+              "element_id": "html__body__div__div_7__div__div_2",
+              "differences": [
+                {
+                  "change_type": "equal",
+                  "text": "\u201cI\u2019ve always been positive and upbeat\u2014it killed me to say I didn\u2019t feel good,\u201d Lori says. \u201cNow I can genuinely say I feel [like myself again].\u201d -Lori \u201cI found something that helps me feel more like my old self again,\u201d he says. \u201cThat matters. I just want to live my life.\u201d -Jeffrey \u201cWe\u2019re all on this journey together. And if I can help someone feel even a little less afraid of the future, then I\u2019ve done what I set out to do.\u201d -Navin"
+                }
+              ],
+              "dissimilarity_score": 0.0
+            }
+          ],
+          "similarity_score": 0.0
+        }
+      ]
+    },
+    {
+      "name": "unknown",
+      "cluster": 9,
+      "instances": [
+        {
+          "url": "https://crexont.com/",
+          "urlHash": "751205e1740f50ec30343e496129d05c4e5a94fb",
+          "uuid": "751205e1-11-9147325cf6c1b5e5656d8a231634a109a36b4bbc",
+          "xpath": "/html[1]/body[1]/div[1]/div[9]",
+          "section": "section-3"
+        }
+      ]
+    },
+    {
+      "name": "Accordion",
+      "cluster": 10,
+      "source": "Accordion",
+      "target": "Accordion",
+      "key": "accordion10",
+      "instances": [
+        {
+          "url": "https://crexont.com/",
+          "urlHash": "751205e1740f50ec30343e496129d05c4e5a94fb",
+          "uuid": "751205e1-13-1802651c789846c0d15ed88f620b523ebd8a9e64",
+          "xpath": "/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]",
+          "differences": [
+            {
+              "element_id": "html__body__div_2__div__div__div__div__div__div_2",
+              "differences": [
+                {
+                  "change_type": "equal",
+                  "text": "INDICATION CREXONT\u00ae (carbidopa and levodopa) extended-release capsules is a prescription medication for the treatment of Parkinson\u2019s disease, Parkinson\u2019s disease caused by infection or inflammation of the brain, or Parkinson\u2019s disease-like symptoms that may result from carbon monoxide or manganese poisoning in adults. IMPORTANT SAFETY INFORMATION Do not take CREXONT with antidepressant medications known as nonselective monoamine oxidase (MAO) inhibitors. Do not take CREXONT with other carbidopa-levodopa preparations without consulting your healthcare provider. CREXONT may cause falling asleep during activities of daily living, somnolence, or dizziness. Avoid activities that require alertness such as driving and operating machinery until you know how CREXONT affects you. The most common side effects that may occur with CREXONT are nausea and anxiety. It is important to avoid sudden discontinuation or rapid dose reduction of CREXONT. If you are discontinuing CREXONT, work with your healthcare provider to taper the dose over time to reduce the risk of fever or confusion. You may take CREXONT with or without food, but taking it with food may decrease or delay its effect. Consider taking the first dose of the day about 1 to 2 hours before eating. Swallow CREXONT whole. Do not chew, divide, or crush the capsules. Do not take CREXONT with alcohol. Tell your healthcare provider if you: Have any heart conditions, especially if you have had a heart attack or irregular heartbeats Experience hallucinations or abnormal thoughts and behaviors Have an inability to control urges to gamble, have increased sexual urges, or experience other intense urges Have thoughts of suicide or have attempted suicide Have abnormal involuntary movements that appear or get worse during treatment Have ever had a peptic ulcer or glaucoma Become or intend to become pregnant. Based on animal data, CREXONT may cause fetal harm Are breastfeeding during therapy "
+                },
+                {
+                  "change_type": "deletion",
+                  "text": "INDICATION CREXONT\u00ae (carbidopa and levodopa) extended-release capsules is a prescription medication for the treatment of Parkinson\u2019s disease, Parkinson\u2019s disease caused by infection or inflammation of the brain, or Parkinson\u2019s disease-like symptoms that may result from carbon monoxide or manganese poisoning in adults. "
+                },
+                {
+                  "change_type": "equal",
+                  "text": "To report SUSPECTED ADVERSE REACTIONS, contact Amneal Specialty, a division of Amneal Pharmaceuticals, LLC at 1-877-835-5472 or the FDA at 1-800-FDA\u2060-1088 or www.fda.gov/medwatch . Please read the full Prescribing Information . For more information talk to your healthcare provider."
+                }
+              ],
+              "dissimilarity_score": 0.01
+            }
+          ],
+          "similarity_score": 0.99
+        }
+      ]
+    },
+    {
+      "name": "Columns",
+      "cluster": 11,
+      "source": "Columns",
+      "target": "Columns (columns11)",
+      "key": "columns11",
+      "instances": [
+        {
+          "url": "https://crexont.com/",
+          "urlHash": "751205e1740f50ec30343e496129d05c4e5a94fb",
+          "uuid": "751205e1-24-7bfbeabc4de7c0c231ffde7c9d5b34d34c0326d6",
+          "xpath": "/html[1]/body[1]/div[2]/div[3]/div[1]/div[1]",
+          "differences": [
+            {
+              "element_id": "html__body__div_2__div_3__div__div",
+              "differences": [
+                {
+                  "change_type": "deletion",
+                  "text": "About \u201cGood On\u201d time How CREXONT works Starting CREXONT Safety Support & resources CREXONT stories About \u201cGood On\u201d time How CREXONT works Starting CREXONT Safety Support & resources CREXONT stories Stay updated Sitemap Thriving with PD Stay updated Sitemap Thriving with PD"
+                }
+              ],
+              "dissimilarity_score": 1.0
+            }
+          ],
+          "similarity_score": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Columns",
+      "cluster": 12,
+      "source": "Columns",
+      "target": "Columns (columns12)",
+      "key": "columns12",
+      "instances": [
+        {
+          "url": "https://crexont.com/",
+          "urlHash": "751205e1740f50ec30343e496129d05c4e5a94fb",
+          "uuid": "751205e1-25-3cfdac99b3120c30acca2c2aafc52daa86783b00",
+          "xpath": "/html[1]/body[1]/div[2]/div[3]/div[1]/div[2]",
+          "differences": [
+            {
+              "element_id": "html__body__div_2__div_3__div__div_2",
+              "differences": [
+                {
+                  "change_type": "equal",
+                  "text": "Terms of use Privacy notice Contact us Accessibility statement Cookie policy"
+                },
+                {
+                  "change_type": "deletion",
+                  "text": " Terms of use Privacy notice Contact us Accessibility statement Cookie policy"
+                }
+              ],
+              "dissimilarity_score": -0.0
+            }
+          ],
+          "similarity_score": 0.0
+        }
+      ]
+    }
+  ],
+  "outliers": [
+    {
+      "url": "https://crexont.com/",
+      "urlHash": "751205e1740f50ec30343e496129d05c4e5a94fb",
+      "uuid": "751205e1-00-70928af0e9d7f0ac1f13f2d60f543d2cf08783dd",
+      "xpath": "/html[1]/body[1]/header[1]/div[1]",
+      "section": "section-1",
+      "differences": [
+        {
+          "element_id": "html__body__header__div",
+          "differences": [
+            {
+              "change_type": "deletion",
+              "text": "By continuing to use this site, you agree to our use of cookies as described in our Cookie Policy ."
+            }
+          ],
+          "dissimilarity_score": 1.0
+        }
+      ],
+      "similarity_score": 0.0
+    },
+    {
+      "url": "https://crexont.com/",
+      "urlHash": "751205e1740f50ec30343e496129d05c4e5a94fb",
+      "uuid": "751205e1-02-10ff6870fe0e1e8555c1dab4170caa3e62155dbd",
+      "xpath": "/html[1]/body[1]/div[1]/div[2]"
+    },
+    {
+      "url": "https://crexont.com/",
+      "urlHash": "751205e1740f50ec30343e496129d05c4e5a94fb",
+      "uuid": "751205e1-05-911d8640f29f83687af8a5af6e0a440da8394b72",
+      "xpath": "/html[1]/body[1]/div[1]/div[4]/div[2]"
+    },
+    {
+      "url": "https://crexont.com/",
+      "urlHash": "751205e1740f50ec30343e496129d05c4e5a94fb",
+      "uuid": "751205e1-12-f646d6a820b6ec3d5c2dfdc9dfc34d0a759298cf",
+      "xpath": "/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]"
+    },
+    {
+      "url": "https://crexont.com/",
+      "urlHash": "751205e1740f50ec30343e496129d05c4e5a94fb",
+      "uuid": "751205e1-14-e366773a5bd1d6a8c9bed1ae834ce018fd0361af",
+      "xpath": "/html[1]/body[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/p[1]"
+    },
+    {
+      "url": "https://crexont.com/",
+      "urlHash": "751205e1740f50ec30343e496129d05c4e5a94fb",
+      "uuid": "751205e1-15-3026425aa169f90c61ff5a1eef33a5bb8e2ac0a4",
+      "xpath": "/html[1]/body[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/p[2]"
+    },
+    {
+      "url": "https://crexont.com/",
+      "urlHash": "751205e1740f50ec30343e496129d05c4e5a94fb",
+      "uuid": "751205e1-16-c81b0190f39d7c8f22c3422afd0aeafe45eb531a",
+      "xpath": "/html[1]/body[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/p[3]"
+    },
+    {
+      "url": "https://crexont.com/",
+      "urlHash": "751205e1740f50ec30343e496129d05c4e5a94fb",
+      "uuid": "751205e1-17-4517c861ccc94f9b8688dc715ae5e78e2b7b615b",
+      "xpath": "/html[1]/body[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/p[4]"
+    },
+    {
+      "url": "https://crexont.com/",
+      "urlHash": "751205e1740f50ec30343e496129d05c4e5a94fb",
+      "uuid": "751205e1-18-3a6756da5477c424249dbf3df85e14b8489a4a5b",
+      "xpath": "/html[1]/body[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/p[5]"
+    },
+    {
+      "url": "https://crexont.com/",
+      "urlHash": "751205e1740f50ec30343e496129d05c4e5a94fb",
+      "uuid": "751205e1-19-28cb1d2463871e57c24ecd9e5a83904e0f5ba8ff",
+      "xpath": "/html[1]/body[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/p[6]"
+    },
+    {
+      "url": "https://crexont.com/",
+      "urlHash": "751205e1740f50ec30343e496129d05c4e5a94fb",
+      "uuid": "751205e1-20-7d7febc93e2ffafef66d9a8ce430344f3c247a45",
+      "xpath": "/html[1]/body[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/p[7]"
+    },
+    {
+      "url": "https://crexont.com/",
+      "urlHash": "751205e1740f50ec30343e496129d05c4e5a94fb",
+      "uuid": "751205e1-21-75cdf5328f0f32e1c481e80e131c3c167c27b759",
+      "xpath": "/html[1]/body[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/p[8]"
+    },
+    {
+      "url": "https://crexont.com/",
+      "urlHash": "751205e1740f50ec30343e496129d05c4e5a94fb",
+      "uuid": "751205e1-22-6d880f9b8b00ddaea9638d8855912afd4bd749b7",
+      "xpath": "/html[1]/body[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/p[9]"
+    },
+    {
+      "url": "https://crexont.com/",
+      "urlHash": "751205e1740f50ec30343e496129d05c4e5a94fb",
+      "uuid": "751205e1-23-ad0ff85c39f1948d0c21c1a0ed7411fd81db2857",
+      "xpath": "/html[1]/body[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/ul[1]"
+    },
+    {
+      "url": "https://crexont.com/",
+      "urlHash": "751205e1740f50ec30343e496129d05c4e5a94fb",
+      "uuid": "751205e1-26-09bc5b3870cd6f656e88e4daee23300cff7bef28",
+      "xpath": "/html[1]/body[1]/div[2]/div[3]/div[1]/div[3]",
+      "differences": [
+        {
+          "element_id": "html__body__div_2__div_3__div__div_3",
+          "differences": [
+            {
+              "change_type": "equal",
+              "text": "CREXONT\u00ae is a registered trademark of Amneal Pharmaceuticals LLC. \u00a9 2025 Amneal Pharmaceuticals LLC. Distributed by Amneal Specialty, a division of Amneal Pharmaceuticals LLC. All rights reserved. PP-IPX203-US-0026 06/2025 This is intended for residents of the United States only. Any product discussed herein may have different product labeling in different countries. Please read the full Prescribing Information and discuss it with your doctor or healthcare professional."
+            }
+          ],
+          "dissimilarity_score": 0.0
+        }
+      ],
+      "similarity_score": 0.0
+    }
+  ],
+  "pages": [
+    {
+      "url": "https://crexont.com/",
+      "differences": [
+        {
+          "change_type": "deletion",
+          "text": "Skip to content "
+        },
+        {
+          "change_type": "equal",
+          "text": "By continuing to use this site, you agree to our use of cookies as described in our Cookie Policy . "
+        },
+        {
+          "change_type": "insertion",
+          "text": "Skip to content "
+        },
+        {
+          "change_type": "equal",
+          "text": "About \u201cGood On\u201d time How CREXONT works Starting CREXONT Safety Support & resources CREXONT stories Stay updated Important Safety Information Full Prescribing Information For Healthcare Providers Stay updated Menu About \u201cGood On\u201d time How CREXONT works Starting CREXONT Safety Support & resources CREXONT stories Stay updated Important Safety Information Full Prescribing Information For Healthcare Providers Stay updated Important Safety Information Full Prescribing Information For Healthcare Providers Stay updated Important Safety Information Full Prescribing Information For Healthcare Providers Stay updated About \u201cGood On\u201d time How CREXONT works Starting CREXONT Safety Support & resources CREXONT stories About \u201cGood On\u201d time How CREXONT works Starting CREXONT Safety Support & resources CREXONT stories For adults with Parkinson\u2019s disease 13,700+ patients in the United States have been prescribed CREXONT 1 David, a real person with Parkinson\u2019s disease For adults with Parkinson\u2019s disease (PD) From lunch to leash to lake Stay in step with your day with CREXONT: More \u201cGood On\u201d time* with less frequent dosing compared with immediate-release carbidopa/levodopa (IR CD/LD)\u2020 *\u201cGood On\u201d time is defined as \u201cOn\u201d time without troublesome dyskinesia. \u2020As seen in a clinical study. Take your next step More \u201cGood On\u201d time* with less frequent dosing compared to IR CD/LD How CREXONT works Designed to gradually release levodopa CREXONT is designed to gradually release levodopa in the part of the gut where it is best absorbed, although the exact site and duration of absorption is unknown More \u201cGood On\u201d time"
+        },
+        {
+          "change_type": "deletion",
+          "text": "* \u2021 "
+        },
+        {
+          "change_type": "insertion",
+          "text": "*\u2021 "
+        },
+        {
+          "change_type": "equal",
+          "text": "People who took CREXONT an average of 3 times a day achieved 30 minutes more \u201cGood On\u201d time per day than those taking IR CD/LD an average of 5 times a day Personalized dosing CREXONT dosing starts at 3 times per day for most patients, though dosing may start at 2 to 3 times per day. After 1 to 3 days, your doctor may adjust your dose or frequency. CREXONT may be dosed up to 4 times a day Play Video CREXONT has transformed innovation into duration For the first time in Parkinson\u2019s disease, an oral therapy was designed to target where levodopa is best absorbed\u2014the proximal small intestine\u2014making CREXONT the oral CD/LD formulation with the longest-lasting LD plasma levels. \u2020\u2021 Discover how it works \u2020 Exact site and duration of absorption are unknown. \u2021 In a clinical pharmacology study, the duration of levodopa levels was defined by how long the levels of CREXONT, RYTARY, and IR CD/LD were maintained in the blood above half the maximum concentration. Are you optimizing your \u201cGood On\u201d time* with your current Parkinson\u2019s disease treatment? IR CD/LD has been the standard of care for treating PD for many years\u2014it\u2019s designed to work quickly but may wear off quickly too. About \u201cGood On\u201d time See real stories from real people Learn how CREXONT helps people who are living with Parkinson\u2019s disease. CREXONT Stories \u201cI\u2019ve always been positive and upbeat\u2014it killed me to say I didn\u2019t feel good,\u201d Lori says. \u201cNow I can genuinely say I feel [like myself again].\u201d -Lori \u201cI found something that helps me feel more like my old self again,\u201d he says. \u201cThat matters. I just want to live my life.\u201d -Jeffrey \u201cWe\u2019re all on this journey together. And if I can help someone feel even a little less afraid of the future, then I\u2019ve done what I set out to do.\u201d -Navin Footnotes *\u201cGood On\u201d time is defined as \u201cOn\u201d time without troublesome dyskinesia. \u2020As seen in a clinical study. \u2021Change in \u201cGood On\u201d time was measured by comparing values at the end of study to baseline; P =0.019 vs IR CD/LD. 1. Data on file. Amneal Pharmaceuticals LLC. Indication & Important Safety Information INDICATION CREXONT\u00ae (carbidopa and levodopa) extended-release capsules is a prescription medication for the treatment of Parkinson\u2019s disease, Parkinson\u2019s disease caused by infection or inflammation of the brain, or Parkinson\u2019s disease-like symptoms that may result from carbon monoxide or manganese poisoning in adults. IMPORTANT SAFETY INFORMATION Do not take CREXONT with antidepressant medications known as nonselective monoamine oxidase (MAO) inhibitors. Do not take CREXONT with other carbidopa-levodopa preparations without consulting your healthcare provider. CREXONT may cause falling asleep during activities of daily living, somnolence, or dizziness. Avoid activities that require alertness such as driving and operating machinery until you know how CREXONT affects you. The most common side effects that may occur with CREXONT are nausea and anxiety. It is important to avoid sudden discontinuation or rapid dose reduction of CREXONT. If you are discontinuing CREXONT, work with your healthcare provider to taper the dose over time to reduce the risk of fever or confusion. You may take CREXONT with or without food, but taking it with food may decrease or delay its effect. Consider taking the first dose of the day about 1 to 2 hours before eating. Swallow CREXONT whole. Do not chew, divide, or crush the capsules. Do not take CREXONT with alcohol. Tell your healthcare provider if you: Have any heart conditions, especially if you have had a heart attack or irregular heartbeats Experience hallucinations or abnormal thoughts and behaviors Have an inability to control urges to gamble, have increased sexual urges, or experience other intense urges Have thoughts of suicide or have attempted suicide Have abnormal involuntary movements that appear or get worse during treatment Have ever had a peptic ulcer or glaucoma Become or intend to become pregnant. Based on animal data, CREXONT may cause fetal harm Are breastfeeding during therapy "
+        },
+        {
+          "change_type": "deletion",
+          "text": "INDICATION CREXONT\u00ae (carbidopa and levodopa) extended-release capsules is a prescription medication for the treatment of Parkinson\u2019s disease, Parkinson\u2019s disease caused by infection or inflammation of the brain, or Parkinson\u2019s disease-like symptoms that may result from carbon monoxide or manganese poisoning in adults. "
+        },
+        {
+          "change_type": "equal",
+          "text": "To report SUSPECTED ADVERSE REACTIONS, contact Amneal Specialty, a division of Amneal Pharmaceuticals, LLC at 1-877-835-5472 or the FDA at 1-800-FDA\u2060-1088 or www.fda.gov/medwatch . Please read the full Prescribing Information . For more information talk to your healthcare provider. Indication & Important Safety Information INDICATION CREXONT\u00ae (carbidopa and levodopa) extended-release capsules is a prescription medication for the treatment of Parkinson\u2019s disease, Parkinson\u2019s disease caused by infection or inflammation of the brain, or Parkinson\u2019s disease-like symptoms that may result from carbon monoxide or manganese poisoning in adults. IMPORTANT SAFETY INFORMATION Do not take CREXONT with antidepressant medications known as nonselective monoamine oxidase (MAO) inhibitors. Do not take CREXONT with other carbidopa-levodopa preparations without consulting your healthcare provider. CREXONT may cause falling asleep during activities of daily living, somnolence, or dizziness. Avoid activities that require alertness such as driving and operating machinery until you know how CREXONT affects you. The most common side effects that may occur with CREXONT are nausea and anxiety. It is important to avoid sudden discontinuation or rapid dose reduction of CREXONT. If you are discontinuing CREXONT, work with your healthcare provider to taper the dose over time to reduce the risk of fever or confusion. You may take CREXONT with or without food, but taking it with food may decrease or delay its effect. Consider taking the first dose of the day about 1 to 2 hours before eating. Swallow CREXONT whole. Do not chew, divide, or crush the capsules. Do not take CREXONT with alcohol. Tell your healthcare provider if you: Have any heart conditions, especially if you have had a heart attack or irregular heartbeats Experience hallucinations or abnormal thoughts and behaviors Have an inability to control urges to gamble, have increased sexual urges, or experience other intense urges Have thoughts of suicide or have attempted suicide Have abnormal involuntary movements that appear or get worse during treatment Have ever had a peptic ulcer or glaucoma Become or intend to become pregnant. Based on animal data, CREXONT may cause fetal harm Are breastfeeding during therapy INDICATION CREXONT\u00ae (carbidopa and levodopa) extended-release capsules is a prescription medication for the treatment of Parkinson\u2019s disease, Parkinson\u2019s disease caused by infection or inflammation of the brain, or Parkinson\u2019s disease-like symptoms that may result from carbon monoxide or manganese poisoning in adults. To report SUSPECTED ADVERSE REACTIONS, contact Amneal Specialty, a division of Amneal Pharmaceuticals, LLC at 1-877-835-5472 or the FDA at 1-800-FDA\u2060-1088 or www.fda.gov/medwatch . Please read the full Prescribing Information . For more information talk to your healthcare provider. About \u201cGood On\u201d time How CREXONT works Starting CREXONT Safety Support & resources CREXONT stories About \u201cGood On\u201d time How CREXONT works Starting CREXONT Safety Support & resources CREXONT stories Stay updated Sitemap Thriving with PD Stay updated Sitemap Thriving with PD"
+        },
+        {
+          "change_type": "deletion",
+          "text": " Terms of use Privacy notice Contact us Accessibility statement Cookie policy"
+        },
+        {
+          "change_type": "equal",
+          "text": " Terms of use Privacy notice Contact us Accessibility statement Cookie policy CREXONT\u00ae is a registered trademark of Amneal Pharmaceuticals LLC. \u00a9 2025 Amneal Pharmaceuticals LLC. Distributed by Amneal Specialty, a division of Amneal Pharmaceuticals LLC. All rights reserved. PP-IPX203-US-0026 06/2025 This is intended for residents of the United States only. Any product discussed herein may have different product labeling in different countries. Please read the full Prescribing Information and discuss it with your doctor or healthcare professional."
+        }
+      ],
+      "similarity_score": 0.9985194895200695
+    }
+  ]
+}
