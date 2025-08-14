@@ -184,9 +184,6 @@
   box-sizing: border-box;
 }
 
-/* Outer wrapper: logo column + nav columns side by side horizontally */
-
-/* Logo column */
 .columns .columns-img-col {
   display: flex;
   align-items: center;
@@ -203,7 +200,6 @@
   display: block;
 }
 
-/* Navigation columns: horizontal alignment, full width, side by side */
 .columns > div > div:not(.columns-img-col) {
   flex: 1 1 0;
   display: flex;
@@ -214,7 +210,6 @@
   padding: 0;
 }
 
-/* Each nav column's UL: horizontal nav row */
 .columns > div > div:not(.columns-img-col) ul {
   display: flex;
   flex-flow: row nowrap;
@@ -224,7 +219,6 @@
   padding: 0;
 }
 
-/* List items: horizontal, separated by divider, generous spacing */
 .columns > div > div:not(.columns-img-col) ul li {
   display: flex;
   align-items: center;
@@ -244,7 +238,6 @@
   padding-left: 0;
 }
 
-/* Link styling */
 .columns a {
   color: #1A3356;
   text-decoration: none;
@@ -262,7 +255,6 @@
   text-decoration: underline;
 }
 
-/* If any button/link should stand out, style inline */
 .columns ul li > a.button,
 .columns ul li > button,
 .columns ul li > .button {
@@ -289,7 +281,6 @@
   border-color: #3b63fb;
 }
 
-/* Social icons row (if present inside a p) */
 .columns p {
   display: flex;
   align-items: center;
@@ -307,7 +298,6 @@
   display: block;
 }
 
-/* Responsiveness: stack nav links and columns on small screens */
 @media (width <= 899px) {
   .columns > div {
     flex-direction: column;
@@ -346,5 +336,84 @@
   .columns > div > div:not(.columns-img-col) ul li:first-child {
     border-top: none;
     padding-top: 0;
+  }
+}
+
+
+.columns.columns12 {
+  background: transparent;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.columns.columns12 > div {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 560px;    /* wider for more even spacing */
+  margin-left: auto;
+  margin-right: auto;
+  gap: 24px;           /* more relaxed, even separation */
+  min-height: 20px;
+  padding: 0;   /* prevent wrapping, maintain single row */
+}
+
+.columns.columns12 > div > div {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+
+/* Remove paragraph and container spacing */
+.columns.columns12 .button-container,
+.columns.columns12 .button-container p {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+/* Override button to plain link style */
+.columns.columns12 a.button {
+  font-family: 'Proxima Nova', 'Proxima Nova Fallback', Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #222;
+  background: none;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+  box-shadow: none;
+  text-decoration: none;
+  min-width: 0;
+  line-height: 1.2;
+  transition: color 0.2s;
+  cursor: pointer;
+  display: inline;
+  vertical-align: middle;
+  letter-spacing: 0.01em; /* subtle for improved evenness */
+}
+
+/* Subtle hover effect */
+.columns.columns12 a.button:hover,
+.columns.columns12 a.button:focus {
+  color: #05A;
+  text-decoration: underline;
+  background: none;
+  border: none;
+}
+
+/* Responsive: stack vertically with tight spacing on mobile */
+@media (width <= 600px) {
+  .columns.columns12 > div {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    max-width: 90vw;
+    min-width: 0;
   }
 }
