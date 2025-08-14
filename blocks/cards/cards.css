@@ -1,3 +1,4 @@
+/* stylelint-disable no-descending-specificity */
 .cards > ul {
   list-style: none;
   margin: 0;
@@ -134,14 +135,12 @@
   overflow-wrap: break-word;
 }
 
-/* Remove default list and link styles if any */
 .cards.cards4 ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-/* Responsive adjustments for tablet and mobile */
 @media (width <= 1050px) {
   .cards.cards4 > ul {
     grid-template-columns: 1fr 1fr;
@@ -175,5 +174,96 @@
 
   .cards.cards4 .cards-card-body h4 {
     font-size: 19px;
+  }
+}
+
+
+.cards.cards8 ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  justify-content: center;
+  align-items: start;
+  max-width: 1030px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  list-style: none;
+}
+
+.cards.cards8 ul > li {
+  background-color: #F8FBFD;
+  border-radius: 16px;
+  border: 1px solid #E1F3FB;
+  padding: 8px 26px 12px;
+  box-sizing: border-box;
+  width: 325px;
+  min-width: 280px;
+  max-width: 325px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  font-family: Inter, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.cards.cards8 .cards-card-image {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 0;
+  margin-bottom: 6px;
+}
+
+.cards.cards8 .cards-card-image img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+.cards.cards8 .cards-card-body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0;
+  padding: 0;
+}
+
+.cards.cards8 .cards-card-body p {
+  color: #235772;
+  font-size: 17px;
+  line-height: 1.44;
+  font-family: Inter, 'Helvetica Neue', Arial, sans-serif;
+  margin: 0 0 6px;
+  font-weight: 400;
+  text-align: left;
+}
+
+.cards.cards8 .cards-card-body p:last-child {
+  font-style: italic;
+  font-weight: 700;
+  font-size: 17px;
+  color: #235772;
+  margin: 7px 0 0;
+  text-align: left;
+  line-height: 1.44;
+}
+
+/* Responsive: stack cards vertically on smaller screens */
+@media (width <= 1100px) {
+  .cards.cards8 ul {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 95vw;
+  }
+
+  .cards.cards8 ul > li {
+    width: 95vw;
+    max-width: 98vw;
   }
 }
