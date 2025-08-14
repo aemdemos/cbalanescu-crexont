@@ -64,22 +64,28 @@
 .accordion {
   background: #fff;
   width: 100%;
-  max-width: 740px;
-  margin: 0;
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 13px;
+  color: #444;
+  line-height: 1.5;
+  border: none;
 }
 
 .accordion .accordion.block {
   width: 100%;
-  display: flex;
+  display: grid;
   flex-direction: column;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto auto;
+  gap: 32px 24px;
 }
 
-/* No margin/padding on accordion items */
 .accordion .accordion-item,
 .accordion details {
   border: none;
@@ -90,9 +96,6 @@
   width: 100%;
 }
 
-/* Very tight spacing between accordion items */
-
-/* Accordion summary: flex, label+chevron tightly grouped, no excess width */
 .accordion summary,
 .accordion .accordion-item-label {
   display: flex;
@@ -112,37 +115,35 @@
   font-family: inherit;
 }
 
-/* Hide default marker and ensure chevron sits directly beside label */
 .accordion summary::-webkit-details-marker,
 .accordion summary::marker {
   margin-left: 2px;
 }
 
-/* Headings: left-aligned, larger, bold, dark blue, no margin below */
 .accordion .accordion-item-label h6 {
-  font-size: 22px;
-  font-weight: 700;
-  color: #112447;
+  font-size: 13px;
+  font-weight: bold;
+  color: #0074c1;
   text-transform: uppercase;
   margin: 0;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.02em;
   line-height: 1.1;
   flex: 0 0 auto;
   text-align: left;
+  padding: 0 0 4px;
 }
 
-/* Remove vertical margin under headings */
 .accordion .accordion-item-label {
   margin-bottom: 0;
 }
 
-/* Body Text */
 .accordion .accordion-item-body {
   padding: 0;
   background: transparent;
   border: none;
   width: 100%;
   text-align: left;
+  margin-top: 0;
 }
 
 .accordion .accordion-item-body p,
@@ -159,22 +160,20 @@
   max-width: 100%;
 }
 
-/* Bulleted List Styling */
 .accordion .accordion-item-body ul {
-  margin: 4px 0 4px 22px;
-  padding-left: 0;
+  margin: 0 0 10px 20px;
   list-style-type: disc;
   list-style-position: outside;
+  padding-left: 0;
 }
 
 .accordion .accordion-item-body li {
-  margin-bottom: 1px;
-  color: #112447;
-  font-size: 15px;
+  margin-bottom: 6px;
+  color: #444;
+  font-size: 13px;
   line-height: 22px;
 }
 
-/* Blue bullets (where supported) */
 .accordion .accordion-item-body ul li::marker {
   color: #0070c0;
 }
@@ -199,7 +198,6 @@
   letter-spacing: normal;
 }
 
-/* Remove chevron from last summary (reporting block), if present */
 .accordion details:last-child summary::after {
   display: none;
 }
@@ -218,5 +216,70 @@
     font-size: 14px;
     line-height: 20px;
     max-width: 100%;
+  }
+}
+
+.accordion .accordion.block > .accordion-item:nth-child(1) {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.accordion .accordion.block > .accordion-item:nth-child(2) {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.accordion .accordion.block > .accordion-item:nth-child(3) {
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
+  margin-top: 24px;
+}
+
+.accordion .accordion-item-label strong {
+  font-weight: bold;
+  color: #444;
+}
+
+.accordion .accordion-item-label a {
+  color: #0074c1;
+  text-decoration: underline;
+}
+
+.accordion .accordion-item-body p {
+  margin: 0 0 10px;
+  color: #444;
+}
+
+.accordion .accordion-item-body a {
+  color: #0074c1;
+  text-decoration: underline;
+}
+
+.accordion .accordion-item {
+  border: none;
+  margin: 0 0 16px;
+  background: none;
+  box-shadow: none;
+  padding: 0;
+}
+
+.accordion-item-label::-webkit-details-marker {
+  display: none;
+}
+
+.accordion-item-label {
+  cursor: pointer;
+}
+
+/* Responsive stacking on small screens */
+@media (width <= 700px) {
+  .accordion.block {
+    display: block;
+  }
+
+  .accordion.block > .accordion-item {
+    grid-column: auto;
+    grid-row: auto;
+    margin-top: 0;
   }
 }
