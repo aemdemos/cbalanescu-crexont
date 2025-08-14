@@ -489,8 +489,6 @@
   }
 }
 
-/* Left: image/logo */
-
 .columns .columns-img-col picture,
 .columns .columns-img-col img {
   width: 100%;
@@ -503,14 +501,10 @@
   display: block;
 }
 
-/* Right: stack direct children vertically, with spacing */
-
-/* Only keep the first three children visible as "content"/simulate block stacking */
 .columns > div > div:not(.columns-img-col) > *:nth-child(n+4) {
   display: none;
 }
 
-/* Style first ul (simulate heading/paragraph list) */
 .columns > div > div:not(.columns-img-col) > ul:first-of-type {
   display: flex;
   flex-direction: column;
@@ -529,14 +523,12 @@
   letter-spacing: -0.01em;
 }
 
-/* Highlight first (or last) word with orange on heading for visual similarity */
 .columns > div > div:not(.columns-img-col) > ul:first-of-type li span,
 .columns > div > div:not(.columns-img-col) > ul:first-of-type li strong {
   color: #F26A21;
   font-weight: 700;
 }
 
-/* Style second child (simulate paragraph) */
 .columns > div > div:not(.columns-img-col) > *:nth-child(2) {
   font-size: 1.16rem;
   color: #1C2A42;
@@ -546,7 +538,6 @@
   margin-bottom: 6px;
 }
 
-/* Style third child (simulate button) */
 .columns > div > div:not(.columns-img-col) > *:nth-child(3) a,
 .columns > div > div:not(.columns-img-col) > *:nth-child(3) .button,
 .columns > div > div:not(.columns-img-col) > *:nth-child(3) button {
@@ -573,7 +564,6 @@
   border-color: #F26A21;
 }
 
-/* Simulate footnote with reduced font and muted color if present as 4th child */
 .columns > div > div:not(.columns-img-col) > *:nth-child(4) {
   color: #7C8797;
   font-size: 13px;
@@ -583,7 +573,6 @@
   letter-spacing: 0.01em;
 }
 
-/* Suppress nav bar horizontal flex style on all nested ULs */
 .columns > div > div:not(.columns-img-col) ul,
 .columns > div > div:not(.columns-img-col) ul li {
   display: block;
@@ -608,7 +597,6 @@
   color: #F26A21;
 }
 
-/* Responsive stacking for mobile */
 @media (width <= 900px) {
   .columns > div {
     flex-direction: column;
@@ -629,4 +617,142 @@
     padding: 0;
     min-height: unset;
   }
+}
+
+
+.columns.columns6 {
+  background: #f4fffb;
+  font-family: "Proxima Nova", "Proxima Nova Fallback", sans-serif;
+  padding: 0;
+}
+
+/* Layout: two columns, tighter gap, align items to top */
+.columns.columns6 > div {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 1100px;
+  margin: 0 auto;
+  gap: 24px;
+  padding-top: 0.3em;
+  padding-bottom: 1em;
+}
+
+/* Responsive: stack columns vertically on small screens */
+@media (width <= 900px) {
+  .columns.columns6 > div {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+    padding-top: 0.2em;
+    padding-bottom: 0.6em;
+  }
+}
+
+/* Left column: text block, more compact width */
+.columns.columns6 > div > div:first-child {
+  flex: 0 1 460px;
+  max-width: 460px;
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+}
+
+/* Right column: fixed image width, don't stretch */
+.columns.columns6 .columns-img-col {
+  flex: 0 0 340px;
+  max-width: 340px;
+  min-width: 180px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+/* Image: rounded corners, size, responsive */
+.columns.columns6 .columns-img-col picture,
+.columns.columns6 .columns-img-col img {
+  width: 100%;
+  max-width: 340px;
+  border-radius: 16px;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+@media (width <= 900px) {
+  .columns.columns6 .columns-img-col {
+    justify-content: center;
+    flex: 1 1 100%;
+    margin-top: 0.3em;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .columns.columns6 .columns-img-col picture,
+  .columns.columns6 .columns-img-col img {
+    max-width: 90vw;
+    margin: 0 auto;
+  }
+
+  .columns.columns6 > div > div:first-child {
+    max-width: 100%;
+  }
+}
+
+/* Headline styling: compact, tight stack */
+.columns.columns6 h4 {
+  font-size: 1.62rem;
+  font-weight: 600;
+  color: #003d6a;
+  text-align: left;
+  margin: 0 0 0.10em;
+  line-height: 1.10;
+  letter-spacing: -0.01em;
+}
+
+/* Highlighted phrase in headline (if span/strong present) */
+.columns.columns6 h4 span,
+.columns.columns6 h4 strong {
+  color: #ef6645;
+  font-weight: 600;
+}
+
+/* Supporting paragraph: compact, no excess margin */
+.columns.columns6 > div > div:first-child > p:not(.button-container) {
+  font-size: 1rem;
+  color: #3a3a3a;
+  font-weight: 400;
+  text-align: left;
+  margin: 0 0 0.18em;
+  line-height: 1.28;
+}
+
+/* Call-to-action button: compact, less margin, less radius */
+.columns.columns6 .button-container .button {
+  font-size: 1rem;
+  padding: 0.22em 0.95em;
+  border-radius: 5px;
+  border: 1.5px solid #003d6a;
+  color: #003d6a;
+  background: transparent;
+  font-weight: 600;
+  margin-top: 0.08em;
+  margin-bottom: 0;
+  transition: background 0.2s, color 0.2s;
+  text-align: center;
+  display: inline-block;
+}
+
+.columns.columns6 .button-container .button:hover,
+.columns.columns6 .button-container .button:focus {
+  background: #003d6a;
+  color: #fff;
+}
+
+/* Remove extra margin on last child for tight stack */
+.columns.columns6 > div > div:first-child > *:last-child {
+  margin-bottom: 0;
 }
