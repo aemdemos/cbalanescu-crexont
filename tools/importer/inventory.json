@@ -1,0 +1,327 @@
+{
+  "fragments": [
+    {
+      "name": "nav",
+      "path": "/nav",
+      "totalBoxes": 1,
+      "instances": [
+        {
+          "url": "https://crexont.com/",
+          "urlHash": "751205e1740f50ec30343e496129d05c4e5a94fb",
+          "uuid": "751205e1-00-70928af0e9d7f0ac1f13f2d60f543d2cf08783dd",
+          "xpath": "/html[1]/body[1]/header[1]/div[1]"
+        }
+      ],
+      "styles": {
+        "height": 39,
+        "background": "rgb(17, 36, 71) none repeat scroll 0% 0% / auto padding-box border-box"
+      }
+    },
+    {
+      "name": "footer",
+      "path": "/footer",
+      "totalBoxes": 1,
+      "instances": [
+        {
+          "url": "https://crexont.com/",
+          "urlHash": "751205e1740f50ec30343e496129d05c4e5a94fb",
+          "uuid": "751205e1-26-09bc5b3870cd6f656e88e4daee23300cff7bef28",
+          "xpath": "/html[1]/body[1]/div[2]/div[3]/div[1]/div[3]"
+        }
+      ],
+      "styles": {}
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Columns",
+      "cluster": 1,
+      "source": "Columns",
+      "target": "Columns (columns1)",
+      "key": "columns1",
+      "instances": [
+        {
+          "url": "https://crexont.com/",
+          "urlHash": "751205e1740f50ec30343e496129d05c4e5a94fb",
+          "uuid": "751205e1-01-041eb8ef6e3698f737a6f287ffb2cd6bf4bd4fa6",
+          "xpath": "/html[1]/body[1]/header[1]/div[3]"
+        }
+      ]
+    },
+    {
+      "name": "Hero",
+      "cluster": 2,
+      "source": "Hero",
+      "target": "Hero (hero2)",
+      "key": "hero2",
+      "instances": [
+        {
+          "url": "https://crexont.com/",
+          "urlHash": "751205e1740f50ec30343e496129d05c4e5a94fb",
+          "uuid": "751205e1-03-51c9eecaa4f487a675ad9fb7361498d9052d1fac",
+          "xpath": "/html[1]/body[1]/div[1]/div[3]",
+          "section": "section-2"
+        }
+      ]
+    },
+    {
+      "name": "Hero",
+      "cluster": 3,
+      "source": "Hero",
+      "target": "Hero (hero3)",
+      "key": "hero3",
+      "instances": [
+        {
+          "url": "https://crexont.com/",
+          "urlHash": "751205e1740f50ec30343e496129d05c4e5a94fb",
+          "uuid": "751205e1-04-16321aaf3743d969cbaf39c70c3ff09ca48b29e1",
+          "xpath": "/html[1]/body[1]/div[1]/div[4]/div[1]"
+        }
+      ]
+    },
+    {
+      "name": "Cards",
+      "cluster": 4,
+      "source": "Cards",
+      "target": "Cards (cards4)",
+      "key": "cards4",
+      "instances": [
+        {
+          "url": "https://crexont.com/",
+          "urlHash": "751205e1740f50ec30343e496129d05c4e5a94fb",
+          "uuid": "751205e1-06-b76d2a8e36dca38b26f064c73c92b8f170fb08c2",
+          "xpath": "/html[1]/body[1]/div[1]/div[4]/div[3]"
+        }
+      ]
+    },
+    {
+      "name": "Columns",
+      "cluster": 5,
+      "source": "Columns",
+      "target": "Columns (columns5)",
+      "key": "columns5",
+      "instances": [
+        {
+          "url": "https://crexont.com/",
+          "urlHash": "751205e1740f50ec30343e496129d05c4e5a94fb",
+          "uuid": "751205e1-07-0f1d7f5df3d5be3c797f8c344329fe6d7acc6cbe",
+          "xpath": "/html[1]/body[1]/div[1]/div[5]"
+        }
+      ]
+    },
+    {
+      "name": "Columns",
+      "cluster": 6,
+      "source": "Columns",
+      "target": "Columns (columns6)",
+      "key": "columns6",
+      "instances": [
+        {
+          "url": "https://crexont.com/",
+          "urlHash": "751205e1740f50ec30343e496129d05c4e5a94fb",
+          "uuid": "751205e1-08-4eabbda5311e71fa12ce80cd0e2687c8b4743c67",
+          "xpath": "/html[1]/body[1]/div[1]/div[6]",
+          "section": "section-3"
+        }
+      ]
+    },
+    {
+      "name": "Columns",
+      "cluster": 7,
+      "source": "Columns",
+      "target": "Columns (columns7)",
+      "key": "columns7",
+      "instances": [
+        {
+          "url": "https://crexont.com/",
+          "urlHash": "751205e1740f50ec30343e496129d05c4e5a94fb",
+          "uuid": "751205e1-09-b65150cde6e25cc6c562a07d65b436311d0d5740",
+          "xpath": "/html[1]/body[1]/div[1]/div[7]/div[1]/div[1]"
+        }
+      ]
+    },
+    {
+      "name": "Cards",
+      "cluster": 8,
+      "source": "Cards",
+      "target": "Cards (cards8)",
+      "key": "cards8",
+      "instances": [
+        {
+          "url": "https://crexont.com/",
+          "urlHash": "751205e1740f50ec30343e496129d05c4e5a94fb",
+          "uuid": "751205e1-10-6fd02926802f1e1c3a35be39ad54cfd87610b999",
+          "xpath": "/html[1]/body[1]/div[1]/div[7]/div[1]/div[2]"
+        }
+      ]
+    },
+    {
+      "name": "unknown",
+      "cluster": 9,
+      "instances": [
+        {
+          "url": "https://crexont.com/",
+          "urlHash": "751205e1740f50ec30343e496129d05c4e5a94fb",
+          "uuid": "751205e1-11-9147325cf6c1b5e5656d8a231634a109a36b4bbc",
+          "xpath": "/html[1]/body[1]/div[1]/div[9]",
+          "section": "section-3"
+        }
+      ]
+    },
+    {
+      "name": "Accordion",
+      "cluster": 10,
+      "source": "Accordion",
+      "target": "Accordion",
+      "key": "accordion10",
+      "instances": [
+        {
+          "url": "https://crexont.com/",
+          "urlHash": "751205e1740f50ec30343e496129d05c4e5a94fb",
+          "uuid": "751205e1-13-1802651c789846c0d15ed88f620b523ebd8a9e64",
+          "xpath": "/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]"
+        }
+      ]
+    },
+    {
+      "name": "Columns",
+      "cluster": 11,
+      "source": "Columns",
+      "target": "Columns (columns11)",
+      "key": "columns11",
+      "instances": [
+        {
+          "url": "https://crexont.com/",
+          "urlHash": "751205e1740f50ec30343e496129d05c4e5a94fb",
+          "uuid": "751205e1-24-7bfbeabc4de7c0c231ffde7c9d5b34d34c0326d6",
+          "xpath": "/html[1]/body[1]/div[2]/div[3]/div[1]/div[1]"
+        }
+      ]
+    },
+    {
+      "name": "Columns",
+      "cluster": 12,
+      "source": "Columns",
+      "target": "Columns (columns12)",
+      "key": "columns12",
+      "instances": [
+        {
+          "url": "https://crexont.com/",
+          "urlHash": "751205e1740f50ec30343e496129d05c4e5a94fb",
+          "uuid": "751205e1-25-3cfdac99b3120c30acca2c2aafc52daa86783b00",
+          "xpath": "/html[1]/body[1]/div[2]/div[3]/div[1]/div[2]"
+        }
+      ]
+    }
+  ],
+  "outliers": [
+    {
+      "url": "https://crexont.com/",
+      "urlHash": "751205e1740f50ec30343e496129d05c4e5a94fb",
+      "uuid": "751205e1-00-70928af0e9d7f0ac1f13f2d60f543d2cf08783dd",
+      "xpath": "/html[1]/body[1]/header[1]/div[1]",
+      "section": "section-1"
+    },
+    {
+      "url": "https://crexont.com/",
+      "urlHash": "751205e1740f50ec30343e496129d05c4e5a94fb",
+      "uuid": "751205e1-02-10ff6870fe0e1e8555c1dab4170caa3e62155dbd",
+      "xpath": "/html[1]/body[1]/div[1]/div[2]"
+    },
+    {
+      "url": "https://crexont.com/",
+      "urlHash": "751205e1740f50ec30343e496129d05c4e5a94fb",
+      "uuid": "751205e1-05-911d8640f29f83687af8a5af6e0a440da8394b72",
+      "xpath": "/html[1]/body[1]/div[1]/div[4]/div[2]"
+    },
+    {
+      "url": "https://crexont.com/",
+      "urlHash": "751205e1740f50ec30343e496129d05c4e5a94fb",
+      "uuid": "751205e1-12-f646d6a820b6ec3d5c2dfdc9dfc34d0a759298cf",
+      "xpath": "/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]"
+    },
+    {
+      "url": "https://crexont.com/",
+      "urlHash": "751205e1740f50ec30343e496129d05c4e5a94fb",
+      "uuid": "751205e1-14-e366773a5bd1d6a8c9bed1ae834ce018fd0361af",
+      "xpath": "/html[1]/body[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/p[1]"
+    },
+    {
+      "url": "https://crexont.com/",
+      "urlHash": "751205e1740f50ec30343e496129d05c4e5a94fb",
+      "uuid": "751205e1-15-3026425aa169f90c61ff5a1eef33a5bb8e2ac0a4",
+      "xpath": "/html[1]/body[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/p[2]"
+    },
+    {
+      "url": "https://crexont.com/",
+      "urlHash": "751205e1740f50ec30343e496129d05c4e5a94fb",
+      "uuid": "751205e1-16-c81b0190f39d7c8f22c3422afd0aeafe45eb531a",
+      "xpath": "/html[1]/body[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/p[3]"
+    },
+    {
+      "url": "https://crexont.com/",
+      "urlHash": "751205e1740f50ec30343e496129d05c4e5a94fb",
+      "uuid": "751205e1-17-4517c861ccc94f9b8688dc715ae5e78e2b7b615b",
+      "xpath": "/html[1]/body[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/p[4]"
+    },
+    {
+      "url": "https://crexont.com/",
+      "urlHash": "751205e1740f50ec30343e496129d05c4e5a94fb",
+      "uuid": "751205e1-18-3a6756da5477c424249dbf3df85e14b8489a4a5b",
+      "xpath": "/html[1]/body[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/p[5]"
+    },
+    {
+      "url": "https://crexont.com/",
+      "urlHash": "751205e1740f50ec30343e496129d05c4e5a94fb",
+      "uuid": "751205e1-19-28cb1d2463871e57c24ecd9e5a83904e0f5ba8ff",
+      "xpath": "/html[1]/body[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/p[6]"
+    },
+    {
+      "url": "https://crexont.com/",
+      "urlHash": "751205e1740f50ec30343e496129d05c4e5a94fb",
+      "uuid": "751205e1-20-7d7febc93e2ffafef66d9a8ce430344f3c247a45",
+      "xpath": "/html[1]/body[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/p[7]"
+    },
+    {
+      "url": "https://crexont.com/",
+      "urlHash": "751205e1740f50ec30343e496129d05c4e5a94fb",
+      "uuid": "751205e1-21-75cdf5328f0f32e1c481e80e131c3c167c27b759",
+      "xpath": "/html[1]/body[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/p[8]"
+    },
+    {
+      "url": "https://crexont.com/",
+      "urlHash": "751205e1740f50ec30343e496129d05c4e5a94fb",
+      "uuid": "751205e1-22-6d880f9b8b00ddaea9638d8855912afd4bd749b7",
+      "xpath": "/html[1]/body[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/p[9]"
+    },
+    {
+      "url": "https://crexont.com/",
+      "urlHash": "751205e1740f50ec30343e496129d05c4e5a94fb",
+      "uuid": "751205e1-23-ad0ff85c39f1948d0c21c1a0ed7411fd81db2857",
+      "xpath": "/html[1]/body[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/ul[1]"
+    },
+    {
+      "url": "https://crexont.com/",
+      "urlHash": "751205e1740f50ec30343e496129d05c4e5a94fb",
+      "uuid": "751205e1-26-09bc5b3870cd6f656e88e4daee23300cff7bef28",
+      "xpath": "/html[1]/body[1]/div[2]/div[3]/div[1]/div[3]"
+    }
+  ],
+  "sections": [
+    {
+      "name": "section-1",
+      "background": "rgb(17, 36, 71) none repeat scroll 0% 0% / auto padding-box border-box",
+      "count": 1
+    },
+    {
+      "name": "section-2",
+      "background": "rgba(0, 0, 0, 0) url(\"https://crexont.com/wp-content/uploads/2024/10/Homepage_Hero-optimized.png\") no-repeat scroll 100% 0% / 100% padding-box border-box",
+      "count": 1
+    },
+    {
+      "name": "section-3",
+      "background": "rgb(244, 255, 253) none repeat scroll 0% 0% / auto padding-box border-box",
+      "count": 2
+    }
+  ]
+}
