@@ -763,7 +763,6 @@
 }
 
 .hero.hero31.block > div:first-child {
-  /* This is the icon wrapper */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -773,7 +772,6 @@
 }
 
 .hero.hero31.block > div:first-child > div {
-  /* This wraps the <picture> */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -858,5 +856,103 @@
   .hero.hero31.block > div:last-child {
     align-items: center;
     text-align: center;
+  }
+}
+
+
+.hero.hero33 {
+  /* Block container styles */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: radial-gradient(circle at 70% 30%, #7AC8EA 0%, #0776A0 100%);
+  border-radius: 28px;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 40px 32px; /* Reduced left padding for a more anchored left look */
+  box-sizing: border-box;
+}
+
+.hero.hero33 > div:first-child {
+  /* Fully collapse left column so text starts closer to left edge */
+  flex: 0 0 0;
+  min-width: 0;
+  display: none;
+}
+
+.hero.hero33 > div:last-child {
+  /* Main content column */
+  flex: 1 1 0;
+  display: flex;
+  align-items: flex-start;
+  min-width: 0;
+  height: 100%;
+  justify-content: flex-start;
+}
+
+.hero.hero33 > div:last-child > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  width: 100%;
+  max-width: 600px;
+  margin-left: 0;
+  padding-left: 0; /* Remove any left padding here for tightest alignment */
+}
+
+.hero.hero33 > div:last-child > div > p:first-child {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  font-weight: 600;
+  color: rgb(255 255 255 / 80%);
+  margin: 0 0 16px;
+}
+
+.hero.hero33 h3 {
+  font-size: 32px;
+  font-weight: 500;
+  color: #fff;
+  margin: 0 0 16px;
+  line-height: 1.15;
+  text-align: left;
+}
+
+.hero.hero33 h3 + p {
+  font-size: 15px;
+  color: rgb(255 255 255 / 85%);
+  font-weight: 400;
+  margin: 0;
+  line-height: 1.5;
+  text-align: left;
+}
+
+/* Responsive adjustments for small screens */
+@media (width <= 700px) {
+  .hero.hero33 {
+    flex-direction: column;
+    max-width: 98vw;
+    padding: 32px 16px;
+    border-radius: 20px;
+  }
+
+  .hero.hero33 > div:first-child {
+    display: none;
+  }
+
+  .hero.hero33 > div:last-child {
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .hero.hero33 > div:last-child > div {
+    max-width: 100%;
+    padding-left: 0;
+  }
+
+  .hero.hero33 h3 {
+    font-size: 24px;
   }
 }
