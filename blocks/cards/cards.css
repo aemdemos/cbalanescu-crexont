@@ -1,4 +1,3 @@
-/* stylelint-disable no-descending-specificity */
 .cards > ul {
   list-style: none;
   margin: 0;
@@ -175,8 +174,6 @@
   justify-content: center;
   align-items: flex-start;
 }
-
-/* Grid layout for multi-row, multi-column cards */
 .cards.cards14 > ul {
   display: grid;
   grid-template-columns: repeat(3, minmax(280px, 1fr));
@@ -189,8 +186,6 @@
   list-style: none;
   place-items: stretch stretch;
 }
-
-/* Card styling */
 .cards.cards14 > ul > li {
   background: #fff;
   border-radius: 12px;
@@ -209,8 +204,6 @@
 .cards.cards14 > ul > li:hover {
   box-shadow: 0 6px 16px 0 rgb(68 86 136 / 12%);
 }
-
-/* Logo/image row at top, horizontally centered */
 .cards.cards14 .cards-card-image {
   display: flex;
   flex-direction: row;
@@ -228,8 +221,6 @@
   display: block;
   margin: 0 auto;
 }
-
-/* Card body text */
 .cards.cards14 .cards-card-body {
   color: #303549;
   font-size: 16px;
@@ -240,8 +231,6 @@
   width: 100%;
   padding: 0;
 }
-
-/* Outlined button, centered horizontally, override base button styles */
 .cards.cards14 > ul > li .button,
 .cards.cards14 > ul > li a.button,
 .cards.cards14 > ul > li button {
@@ -264,16 +253,12 @@
   transition: background 0.15s, border 0.15s;
 }
 
-/* Remove blue background from base button styles */
-
 .cards.cards14 > ul > li .button:hover,
 .cards.cards14 > ul > li a.button:hover,
 .cards.cards14 > ul > li button:hover {
   background: #f0f1f6;
   border-color: #1c2330;
 }
-
-/* Space for SVG icon inside button */
 .cards.cards14 > ul > li .button svg,
 .cards.cards14 > ul > li a.button svg,
 .cards.cards14 > ul > li button svg {
@@ -282,8 +267,6 @@
   height: 1em;
   vertical-align: middle;
 }
-
-/* Responsive grid adjustments */
 @media (width <= 1024px) {
   .cards.cards14 > ul {
     grid-template-columns: repeat(2, minmax(260px, 1fr));
@@ -307,4 +290,105 @@
     min-height: unset;
     padding: 16px 10px;
   }
+}
+
+
+.cards.cards21 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Layout: two cards side by side using flex-row */
+.cards.cards21 > ul {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  align-items: stretch;
+  width: auto;
+}
+
+/* Card base appearance */
+.cards.cards21 > ul > li {
+  background: radial-gradient(ellipse 210px 180px at 80% 0%, #80e17f 0%, #0481b6 45%, #0481b6 100%);
+  color: #fff;
+  border-radius: 16px;
+  padding: 32px 32px 28px 32px;
+  border: none;
+  min-width: 320px;
+  max-width: 340px;
+  min-height: 260px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex: 0 1 340px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  position: relative;
+}
+
+/* Hide images in cards if present to match the reference block */
+.cards.cards21 > ul > li img {
+  display: none;
+}
+
+/* Responsive: stack cards vertically on small screens, adjust spacing */
+@media (max-width: 700px) {
+  .cards.cards21 > ul {
+    flex-direction: column;
+    gap: 24px;
+    align-items: stretch;
+    width: 100%;
+  }
+  .cards.cards21 > ul > li {
+    max-width: 100%;
+    width: 100%;
+    min-width: 0;
+    padding: 24px 20px 22px 20px;
+  }
+}
+
+/* Remove unwanted margin/padding from any card body wrapper */
+.cards.cards21 .cards-card-body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove default list styling from ul and li */
+.cards.cards21 > ul,
+.cards.cards21 > ul > li {
+  list-style: none;
+}
+
+/* Remove extra space if the block is first or last child */
+.cards.cards21:last-child {
+  margin-bottom: 0;
+}
+.cards.cards21:first-child {
+  margin-top: 0;
+}
+
+/* If there are direct children in .cards.cards21 > ul > li, 
+   try to align the first row side-by-side (e.g. number and icon)
+   and keep subsequent content vertically stacked */
+.cards.cards21 > ul > li > *:first-child {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+
+/* Ensure that everything else stacks vertically inside the card */
+.cards.cards21 > ul > li > *:not(:first-child) {
+  margin-top: 16px;
+  width: 100%;
 }
