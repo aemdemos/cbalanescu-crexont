@@ -710,7 +710,6 @@
 
 
 .columns.columns20 {
-  /* Make the block span the full width of its parent and remove any floating effect */
   width: 100%;
   background: #fff;
   margin: 0;
@@ -719,7 +718,6 @@
   display: block;
 }
 
-/* Row: Flex layout, center links, span full width */
 .columns.columns20 > div {
   display: flex;
   flex-direction: row;
@@ -732,7 +730,6 @@
   min-width: 0;
 }
 
-/* Prevent children from stretching or filling extra space */
 .columns.columns20 > div > div {
   flex: 0 0 auto;
   margin: 0;
@@ -740,19 +737,16 @@
   min-width: 0;
 }
 
-/* Remove any default vertical spacing from button container */
 .columns.columns20 .button-container {
   margin: 0;
   padding: 0;
 }
 
-/* Remove inherited margin from paragraph */
 .columns.columns20 .button-container p {
   margin: 0;
   padding: 0;
 }
 
-/* Style the links as simple, small, bold, dark text links (not buttons) */
 .columns.columns20 .button-container .button {
   background: none;
   color: #222;
@@ -772,7 +766,6 @@
   vertical-align: middle;
 }
 
-/* On hover or focus, match simple link styling */
 .columns.columns20 .button-container .button:hover,
 .columns.columns20 .button-container .button:focus {
   color: #222;
@@ -782,11 +775,115 @@
   box-shadow: none;
 }
 
-/* Responsive: stack vertically and reduce gap on small screens */
 @media (width <= 600px) {
   .columns.columns20 > div {
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
   }
+}
+
+
+.columns.columns32 {
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Vertically center all columns */
+  justify-content: space-between;
+  gap: 40px;
+  padding: 24px 0; /* More vertical breathing room */
+  background: #fff;
+}
+
+/* Responsive: stack vertically on small screens */
+@media (width <= 700px) {
+  .columns.columns32 {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+    padding: 14px 0;
+  }
+}
+
+/* The direct row container for left+right columns */
+.columns.columns32 > div {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  min-width: 0;
+  gap: 0;
+}
+
+/* Stack headline and subtext vertically, left-aligned, always vertically centered */
+.columns.columns32 > div > div:first-child {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;  /* Center text block vertically in row */
+  min-width: 0;
+}
+
+/* Headline styling with extra space below */
+.columns.columns32 h4 {
+  color: #14295B;
+  font-size: 22px;
+  font-weight: 400;
+  font-family: var(--heading-font-family);
+  margin: 0 0 12px; /* More gap below headline for separation */
+  line-height: 1.2;
+  text-align: left;
+}
+
+/* Subtext styling, with slightly increased size for legibility */
+.columns.columns32 p:not(.button-container) {
+  color: #666C77;
+  font-size: 13px;
+  font-family: var(--body-font-family);
+  font-weight: 400;
+  margin: 0;
+  line-height: 1.4;
+  text-align: left;
+}
+
+/* Ensure button column is right-aligned and vertically centered */
+.columns.columns32 > div > div:last-child {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-width: 180px;
+}
+
+/* Remove default button container margin */
+.columns.columns32 .button-container {
+  margin: 0;
+}
+
+/* Button styling override */
+.columns.columns32 .button {
+  background: #001D53;
+  color: #FFF;
+  font-size: 13px;
+  font-family: var(--body-font-family);
+  font-weight: 400;
+  border: none;
+  border-radius: 999px;
+  padding: 9px 34px;
+  min-width: 0;
+  min-height: 0;
+  text-align: center;
+  text-decoration: none;
+  line-height: 1.2;
+  margin: 0;
+  box-shadow: none;
+  transition: background 0.2s;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+/* Button hover/focus for accessibility */
+.columns.columns32 .button:hover,
+.columns.columns32 .button:focus {
+  background: #14295B;
 }
