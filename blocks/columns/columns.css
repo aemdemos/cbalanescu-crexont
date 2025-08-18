@@ -39,11 +39,10 @@
   padding: 36px 0;
 }
 
-/* Main row: side-by-side columns, vertical centering */
 .columns.columns1 > div {
   display: flex;
   flex-direction: row;
-  align-items: center; /* Vertically center image and text together */
+  align-items: center;
   justify-content: flex-start;
   gap: 24px;
   max-width: 1200px;
@@ -52,7 +51,6 @@
   box-sizing: border-box;
 }
 
-/* Responsive: stack columns vertically on small screens */
 @media (width <= 899px) {
   .columns.columns1 > div {
     flex-direction: column;
@@ -68,7 +66,6 @@
   }
 }
 
-/* Left column: text content */
 .columns.columns1 > div > div:first-child {
   flex: 1 1 0;
   max-width: 540px;
@@ -78,7 +75,6 @@
   justify-content: center;
 }
 
-/* Right column: let image control sizing, remove restrictive sizing */
 .columns.columns1 > div > .columns-img-col {
   flex: 0 0 auto;
   display: flex;
@@ -90,7 +86,6 @@
   height: auto;
 }
 
-/* Image: portrait flyer shape, allow natural aspect ratio */
 .columns.columns1 .columns-img-col picture,
 .columns.columns1 .columns-img-col img {
   display: block;
@@ -105,7 +100,6 @@
   margin: 0;
 }
 
-/* Label styling (first strong in first p) */
 .columns.columns1 > div > div:first-child > p:first-child strong {
   color: #5FA448;
   font-size: 12px;
@@ -116,7 +110,6 @@
   display: inline-block;
 }
 
-/* Heading: make "CREXONT" orange if wrapped in strong/span/b, fallback to whole heading color */
 .columns.columns1 > div > div:first-child h4 {
   font-size: 22px;
   color: #1A2A43;
@@ -133,7 +126,6 @@
   font-weight: 700;
 }
 
-/* Body text */
 .columns.columns1 > div > div:first-child > p:not(:first-child, .button-container) {
   color: #1A2A43;
   font-size: 14px;
@@ -141,12 +133,10 @@
   line-height: 1.5;
 }
 
-/* Button container spacing */
 .columns.columns1 .button-container {
   margin-top: 18px;
 }
 
-/* Button styles: navy, compact, rounded (override base) */
 .columns.columns1 .button-container .button {
   background: #0A2342;
   color: #fff;
@@ -169,3 +159,142 @@
   background: #183D6D;
   color: #fff;
 }
+
+
+.columns.columns3 {
+  background: #fff;
+  padding: 48px 0;
+  box-sizing: border-box;
+  margin-bottom: 36px;
+}
+
+/* Main layout: flex row for side-by-side columns. Align image and heading tops. */
+.columns.columns3 > div {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 56px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Responsive: stack columns on mobile */
+@media (width <= 900px) {
+  .columns.columns3 > div {
+    flex-direction: column;
+    gap: 32px;
+    max-width: 100%;
+    padding: 0 16px;
+  }
+}
+
+/* Text column: narrow for optimal line length, and remove extra vertical margin */
+.columns.columns3 > div > div:first-child {
+  flex: 1 1 540px;
+  max-width: 540px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 0;
+}
+
+/* "RESOURCES" label */
+.columns.columns3 strong {
+  color: #5bb462;
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 20px;
+  display: block;
+}
+
+/* Heading styles: larger, strong contrast, minimal bottom margin */
+.columns.columns3 h4 {
+  color: #202945;
+  font-size: 2.1rem;
+  font-weight: 700;
+  margin: 0 0 14px;
+  line-height: 1.18;
+}
+
+/* Paragraph styles: tighter spacing for grouping, readable line length */
+.columns.columns3 > div > div:first-child > p {
+  color: #202945;
+  font-size: 1.09rem;
+  line-height: 1.6;
+  margin: 0 0 8px;
+}
+
+/* Last paragraph (with button): no margin-bottom, slightly larger top margin for clarity */
+.columns.columns3 > div > div:first-child > p:last-of-type {
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+
+/* Download button: slightly narrower, tightly grouped */
+.columns.columns3 a[title="Download brochure"] {
+  display: inline-block;
+  background: #142c53;
+  color: #fff;
+  font-size: 1.08rem;
+  font-weight: 500;
+  border-radius: 2em;
+  padding: 0.7em 1.7em;
+  text-decoration: none;
+  margin: 0;
+  box-shadow: 0 2px 12px rgb(20 44 83 / 10%);
+  vertical-align: middle;
+  transition: background 0.2s;
+  min-width: 170px;
+  text-align: center;
+}
+
+/* Button icon: ensure close alignment with text */
+.columns.columns3 p a picture,
+.columns.columns3 p a img {
+  vertical-align: middle;
+  margin-right: 0.5em;
+  width: 1.1em;
+  height: 1.1em;
+  display: inline-block;
+}
+
+/* Image column: remove top margin for alignment, keep drop shadow */
+.columns.columns3 .columns-img-col {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+}
+
+/* Image: smaller, minimal top margin for perfect alignment with heading */
+.columns.columns3 .columns-img-col img {
+  width: 260px;
+  max-width: 100%;
+  aspect-ratio: 1 / 1;
+  box-shadow: 0 6px 24px 0 rgb(32 41 69 / 12%);
+  border-radius: 12px;
+  background: #fff;
+  display: block;
+  margin-top: 0;
+}
+
+/* Responsive image sizing */
+@media (width <= 900px) {
+  .columns.columns3 .columns-img-col img {
+    width: 100%;
+    max-width: 340px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Section bottom spacing */
