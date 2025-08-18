@@ -1019,7 +1019,7 @@
   justify-content: flex-start;
   gap: 28px;
   padding: 44px 0;
-  min-height: 1px; /* Ensure block doesn't collapse if any child is empty */
+  min-height: 1px;
 }
 
 @media (width <= 900px) {
@@ -1031,7 +1031,6 @@
   }
 }
 
-/* Text column (left or right depending on DOM order) */
 .columns.columns41 > div > div:not(.columns-img-col) {
   flex: 1 1 0;
   max-width: 660px;
@@ -1045,7 +1044,6 @@
   margin: 0;
 }
 
-/* Image column: ensure it's visible and takes space */
 .columns.columns41 .columns-img-col {
   flex: 0 0 340px;
   max-width: 340px;
@@ -1061,7 +1059,6 @@
   visibility: visible;
 }
 
-/* Make sure image is visible and styled */
 .columns.columns41 .columns-img-col img {
   width: 100%;
   max-width: 340px;
@@ -1076,7 +1073,6 @@
   visibility: visible;
 }
 
-/* Heading style */
 .columns.columns41 h4 {
   color: #153a5b;
   font-size: 2.2rem;
@@ -1094,7 +1090,6 @@
   font-weight: 700;
 }
 
-/* Body text */
 .columns.columns41 p {
   color: #4d6475;
   font-size: 1rem;
@@ -1105,7 +1100,6 @@
   max-width: 38em;
 }
 
-/* Button */
 .columns.columns41 .button-container {
   width: 100%;
   display: flex;
@@ -1135,7 +1129,157 @@
   border-color: #153a5b;
 }
 
-/* Remove extra spacing below button if present */
 .columns.columns41 .button-container + * {
   margin-top: 0;
+}
+
+
+.columns.columns29 {
+  background: #fff;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Row: two columns, side by side, top-aligned */
+.columns.columns29 > div {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 72px;
+  padding: 56px 48px 44px;
+  box-sizing: border-box;
+  min-height: 120px; /* Ensures minimal vertical space even if empty */
+}
+
+/* Left column (text) */
+.columns.columns29 > div > div:first-child {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  min-width: 0;
+  max-width: 580px;
+  box-sizing: border-box;
+}
+
+/* Right column (logo/image) */
+.columns.columns29 > div > div:last-child {
+  flex: 0 0 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  min-width: 220px;
+  max-width: 380px;
+  box-sizing: border-box;
+}
+
+/* Responsive: stack columns vertically, reduce padding/gaps */
+@media (width <= 900px) {
+  .columns.columns29 > div {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 32px;
+    padding: 32px 12px 28px;
+  }
+
+  .columns.columns29 > div > div:first-child,
+  .columns.columns29 > div > div:last-child {
+    max-width: 100%;
+    min-width: 0;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+}
+
+/* Debug only: temporarily visualize column boundaries if empty */
+.columns.columns29 > div > div:empty {
+  min-height: 80px;
+  background: rgb(0 0 0 / 4%);
+  outline: 1px dashed #ccd;
+  box-sizing: border-box;
+}
+
+/* Button style override for block CTA */
+.columns.columns29 .button,
+.columns.columns29 a.button {
+  background: #002F6C;
+  color: #fff;
+  border: none;
+  border-radius: 2em;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 14px 36px;
+  box-shadow: none;
+  margin: 0.5em 0 0;
+  transition: background 0.2s, color 0.2s;
+}
+
+.columns.columns29 .button:hover,
+.columns.columns29 .button:focus,
+.columns.columns29 a.button:hover,
+.columns.columns29 a.button:focus {
+  background: #20416E;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Heading and brand accent (if present via span) */
+.columns.columns29 h1,
+.columns.columns29 h2,
+.columns.columns29 h3,
+.columns.columns29 h4,
+.columns.columns29 h5,
+.columns.columns29 h6 {
+  color: #01294B;
+  font-family: var(--heading-font-family), Arial, sans-serif;
+  font-weight: 700;
+  margin: 0 0 14px;
+  line-height: 1.2;
+}
+
+.columns.columns29 h1 span,
+.columns.columns29 h2 span,
+.columns.columns29 h3 span,
+.columns.columns29 h4 span,
+.columns.columns29 h5 span,
+.columns.columns29 h6 span {
+  color: #F9A533;
+  font-weight: 700;
+}
+
+/* Paragraph and link styling */
+.columns.columns29 p {
+  color: #01294B;
+  font-size: 1rem;
+  margin: 0 0 14px;
+  line-height: 1.5;
+}
+
+.columns.columns29 p a,
+.columns.columns29 a:not(.button) {
+  color: #0071CE;
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.columns.columns29 p a:hover,
+.columns.columns29 a:not(.button):hover {
+  color: #013a7b;
+  text-decoration: underline;
+}
+
+/* Improve image/logo scaling in right column */
+.columns.columns29 > div > div:last-child img,
+.columns.columns29 > div > div:last-child picture {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
 }
