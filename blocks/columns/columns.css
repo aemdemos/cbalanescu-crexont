@@ -901,8 +901,6 @@
   border-radius: 0;
 }
 
-/* --- IMAGE COLUMN: ensure visible, left, and no border-radius --- */
-
 @media (width <= 900px) {
   .columns > div {
     flex-direction: column;
@@ -919,7 +917,6 @@
   }
 }
 
-/* Ensure the image fills the column and has sharp corners */
 .columns .columns-img-col img,
 .columns .columns-img-col picture {
   display: block;
@@ -934,7 +931,6 @@
   object-fit: cover;
 }
 
-/* --- TEXT COLUMN: right of image, vertically centered --- */
 .columns > div > div:not(.columns-img-col) {
   order: 1;
   flex: 1 1 480px;
@@ -1000,7 +996,146 @@
   text-decoration: none;
 }
 
-/* Remove excess vertical space below button */
 .columns .button-container + * {
+  margin-top: 0;
+}
+
+
+.columns.columns41 {
+  background: #f0fcfa;
+  border-radius: 0;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0;
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+.columns.columns41 > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 28px;
+  padding: 44px 0;
+  min-height: 1px; /* Ensure block doesn't collapse if any child is empty */
+}
+
+@media (width <= 900px) {
+  .columns.columns41 > div {
+    flex-direction: column;
+    gap: 32px;
+    padding: 32px 8px;
+    align-items: stretch;
+  }
+}
+
+/* Text column (left or right depending on DOM order) */
+.columns.columns41 > div > div:not(.columns-img-col) {
+  flex: 1 1 0;
+  max-width: 660px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  color: #153a5b;
+  padding: 0;
+  margin: 0;
+}
+
+/* Image column: ensure it's visible and takes space */
+.columns.columns41 .columns-img-col {
+  flex: 0 0 340px;
+  max-width: 340px;
+  min-width: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  margin: 0;
+  padding: 0;
+  background: none;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Make sure image is visible and styled */
+.columns.columns41 .columns-img-col img {
+  width: 100%;
+  max-width: 340px;
+  height: auto;
+  border-radius: 18px;
+  display: block;
+  object-fit: cover;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Heading style */
+.columns.columns41 h4 {
+  color: #153a5b;
+  font-size: 2.2rem;
+  font-weight: 500;
+  font-family: var(--heading-font-family, Arial, sans-serif);
+  margin: 0 0 22px;
+  line-height: 1.1;
+  text-align: left;
+}
+
+.columns.columns41 h4 span,
+.columns.columns41 h4 em,
+.columns.columns41 h4 strong {
+  color: #E45535;
+  font-weight: 700;
+}
+
+/* Body text */
+.columns.columns41 p {
+  color: #4d6475;
+  font-size: 1rem;
+  font-family: var(--body-font-family, Arial, sans-serif);
+  margin: 0 0 20px;
+  line-height: 1.6;
+  text-align: left;
+  max-width: 38em;
+}
+
+/* Button */
+.columns.columns41 .button-container {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  padding: 0;
+  margin: 0;
+}
+
+.columns.columns41 .button-container .button {
+  background: transparent;
+  border: 1.5px solid #153a5b;
+  color: #153a5b;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 24px;
+  padding: 10px 28px;
+  box-shadow: none;
+  margin: 0;
+  text-align: center;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.columns.columns41 .button-container .button:hover,
+.columns.columns41 .button-container .button:focus {
+  background: #153a5b;
+  color: #fff;
+  border-color: #153a5b;
+}
+
+/* Remove extra spacing below button if present */
+.columns.columns41 .button-container + * {
   margin-top: 0;
 }
