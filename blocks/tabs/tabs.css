@@ -56,3 +56,256 @@
 .tabs .tabs-panel[aria-hidden='true'] {
   display: none;
 }
+
+
+.tabs.tabs40 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  background: #e6f0f1;
+  border-radius: 18px;
+  min-height: 540px;
+  max-width: 1200px;
+  margin: 48px auto 0;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 2;
+  overflow: visible;
+  padding: 0;
+}
+
+@media (width <= 900px) {
+  .tabs.tabs40 {
+    flex-direction: column;
+    min-height: unset;
+    max-width: 100%;
+    border-radius: 18px;
+    margin: 24px 8px;
+  }
+}
+
+/* Left card: ensure both corners are rounded and inner content is clipped */
+.tabs.tabs40 .tabs-list {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 40%;
+  min-width: 350px;
+  max-width: 420px;
+  background: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 18px 0 0 18px;
+  overflow: hidden;
+  height: 100%;
+  align-items: stretch;
+  align-self: stretch;
+  z-index: 1;
+  position: relative;
+}
+
+@media (width <= 900px) {
+  .tabs.tabs40 .tabs-list {
+    flex: 1 1 auto;
+    max-width: unset;
+    min-width: 0;
+    border-radius: 18px 18px 0 0;
+  }
+}
+
+/* Buttons look like card sections */
+.tabs.tabs40 .tabs-list button {
+  width: 100%;
+  text-align: left;
+  margin: 0;
+  border: none;
+  background: #e6f0f1;
+  color: #0d2540;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 28px 32px 20px;
+  box-sizing: border-box;
+  cursor: pointer;
+  outline: none;
+  border-radius: 0;
+  position: relative;
+  line-height: 1.44;
+  transition: background 0.2s;
+  z-index: 2;
+  box-shadow: none;
+}
+
+.tabs.tabs40 .tabs-list button:first-child {
+  background: #0d2540;
+  color: #fff;
+  font-size: 22px;
+  padding: 28px 32px 24px;
+  border-radius: 18px 0 0;
+}
+
+.tabs.tabs40 .tabs-list button:last-child {
+  border-radius: 0 0 0 18px;
+  padding-bottom: 34px;
+}
+
+@media (width <= 900px) {
+  .tabs.tabs40 .tabs-list button,
+  .tabs.tabs40 .tabs-list button:first-child {
+    padding: 20px 16px 12px;
+    font-size: 18px;
+  }
+
+  .tabs.tabs40 .tabs-list button:first-child {
+    border-radius: 18px 18px 0 0;
+  }
+
+  .tabs.tabs40 .tabs-list button:last-child {
+    border-radius: 0 0 18px 18px;
+  }
+}
+
+/* Subtle divider: only between inner buttons, not below last */
+.tabs.tabs40 .tabs-list button:not(:last-child) {
+  border-bottom: 1px solid #e5e8eb;
+  margin-bottom: 6px;
+}
+
+/* Section Headings */
+.tabs.tabs40 .tabs-list button h6 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 12px;
+  color: inherit;
+  padding: 0;
+  line-height: 1.3;
+}
+
+.tabs.tabs40 .tabs-list button:first-child h6 {
+  font-size: 22px;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+/* Paragraph text */
+.tabs.tabs40 .tabs-list button p {
+  font-size: 17px;
+  font-weight: 400;
+  color: inherit;
+  margin: 0 0 2px;
+  line-height: 1.8;
+}
+
+.tabs.tabs40 .tabs-list button:first-child p {
+  color: #fff;
+}
+
+/* Blue underline for h6 in light card blocks (except first) */
+.tabs.tabs40 .tabs-list button:not(:first-child) h6 {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 7px;
+}
+
+.tabs.tabs40 .tabs-list button:not(:first-child) h6::after {
+  display: block;
+  margin-top: 10px;
+  width: 52px;
+  height: 2px;
+  background: #2d86b7;
+  border-radius: 2px;
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  content: "";
+}
+
+/* Space between sections for breathing room */
+
+/* Remove all browser default button styles and focus ring */
+.tabs.tabs40 .tabs-list button:focus {
+  outline: 2px solid #2d86b7;
+}
+
+.tabs.tabs40 .tabs-list button[aria-selected="true"] {
+  background: inherit;
+  color: inherit;
+}
+
+.tabs.tabs40 .tabs-list button:first-child[aria-selected="true"] {
+  background: #0d2540;
+  color: #fff;
+}
+
+.tabs.tabs40 .tabs-list button:not(:first-child)[aria-selected="true"] {
+  background: #e6f0f1;
+  color: #0d2540;
+}
+
+/* Panel area: Side-by-side with cards, top-aligned, image flush with top, less left padding */
+.tabs.tabs40 .tabs-panel {
+  flex: 1 1 60%;
+  background: #e6f0f1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border: none;
+  margin: 0;
+  padding: 0 0 0 12px;
+  min-height: 540px;
+  height: 100%;
+  border-radius: 0 18px 18px 0;
+  position: relative;
+  z-index: 1;
+}
+
+@media (width <= 900px) {
+  .tabs.tabs40 .tabs-panel {
+    min-height: 220px;
+    border-radius: 0 0 18px 18px;
+    padding: 0;
+  }
+}
+
+/* Hide inactive panels */
+.tabs.tabs40 .tabs-panel[aria-hidden="true"] {
+  display: none;
+}
+
+/* Only show the first image inside each tabs-panel */
+.tabs.tabs40 .tabs-panel > div > p > picture ~ picture {
+  display: none;
+}
+
+/* Panel inner div: flush top alignment, no extra padding */
+.tabs.tabs40 .tabs-panel > div {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/* Responsive image in panel, larger and flush with top */
+.tabs.tabs40 .tabs-panel img {
+  max-width: 98%;
+  height: auto;
+  display: block;
+  margin: 0;
+  margin-top: 0;
+}
+
+/* Ensure card and panel heights always match */
+.tabs.tabs40 .tabs-list,
+.tabs.tabs40 .tabs-panel {
+  min-height: 540px;
+  height: 100%;
+}
+
+@media (width <= 900px) {
+  .tabs.tabs40 .tabs-list,
+  .tabs.tabs40 .tabs-panel {
+    min-height: unset;
+    height: auto;
+  }
+}
