@@ -594,8 +594,6 @@
   padding: 0;
 }
 
-
-/* Main columns: keep side by side and vertically centered */
 .columns.columns19 > div {
   display: flex;
   flex-direction: row;
@@ -607,7 +605,6 @@
   padding: 0;
 }
 
-/* Left column: stack headline and icons row, and center vertically */
 .columns.columns19 > div > div:not(.columns-img-col) {
   display: flex;
   flex-direction: column;
@@ -618,7 +615,6 @@
   height: 100%;
 }
 
-/* Headline styling */
 .columns.columns19 h1 {
   font-family: var(--heading-font-family);
   font-size: 2rem;
@@ -629,9 +625,6 @@
   letter-spacing: 0;
 }
 
-/* Horizontal icons row: group all icon <p>s into a flex row after the headline */
-
-/* Use a selector for all <p> siblings after h1 inside the left column */
 .columns.columns19 > div > div:not(.columns-img-col) > h1 + p,
 .columns.columns19 > div > div:not(.columns-img-col) > h1 + p + p,
 .columns.columns19 > div > div:not(.columns-img-col) > h1 + p + p + p {
@@ -643,13 +636,10 @@
   padding: 0;
 }
 
-/* Remove vertical margin from all icon <p>s */
 .columns.columns19 > div > div:not(.columns-img-col) > p {
   margin: 0;
   padding: 0;
 }
-
-/* If the icons are still stacking, try merging all icon <p>s into a single flex row */
 
 .columns.columns19 > div > div:not(.columns-img-col) > h1 ~ p {
   display: flex;
@@ -658,7 +648,6 @@
   gap: 8px;
 }
 
-/* Icon containers */
 .columns.columns19 > div > div:not(.columns-img-col) > p picture {
   display: inline-flex;
   align-items: center;
@@ -673,7 +662,6 @@
   overflow: hidden;
 }
 
-/* Icon image styling */
 .columns.columns19 > div > div:not(.columns-img-col) > p picture img {
   width: 12px;
   height: 12px;
@@ -681,7 +669,6 @@
   filter: brightness(0) invert(1);
 }
 
-/* Right column: image block */
 .columns.columns19 .columns-img-col {
   display: flex;
   align-items: center;
@@ -700,7 +687,6 @@
   max-width: 100%;
 }
 
-/* Responsive: stack vertically on smaller screens */
 @media (width <= 800px) {
   .columns.columns19 > div {
     flex-direction: column;
@@ -719,5 +705,88 @@
     width: 100%;
     height: auto;
     border-radius: 0;
+  }
+}
+
+
+.columns.columns20 {
+  /* Make the block span the full width of its parent and remove any floating effect */
+  width: 100%;
+  background: #fff;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: block;
+}
+
+/* Row: Flex layout, center links, span full width */
+.columns.columns20 > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-width: 0;
+}
+
+/* Prevent children from stretching or filling extra space */
+.columns.columns20 > div > div {
+  flex: 0 0 auto;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+
+/* Remove any default vertical spacing from button container */
+.columns.columns20 .button-container {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove inherited margin from paragraph */
+.columns.columns20 .button-container p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the links as simple, small, bold, dark text links (not buttons) */
+.columns.columns20 .button-container .button {
+  background: none;
+  color: #222;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+  font-family: "Proxima Nova", "Proxima Nova Fallback", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+  box-shadow: none;
+  display: inline-block;
+  cursor: pointer;
+  transition: color 0.2s;
+  vertical-align: middle;
+}
+
+/* On hover or focus, match simple link styling */
+.columns.columns20 .button-container .button:hover,
+.columns.columns20 .button-container .button:focus {
+  color: #222;
+  text-decoration: underline;
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+
+/* Responsive: stack vertically and reduce gap on small screens */
+@media (width <= 600px) {
+  .columns.columns20 > div {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
   }
 }
