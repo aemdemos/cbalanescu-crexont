@@ -287,7 +287,6 @@
 
 
 .columns.columns4 {
-  /* Ensure the block is visible and matches the original layout */
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -302,7 +301,6 @@
   overflow: visible;
 }
 
-/* Responsive: stack columns vertically on small screens */
 @media (width <= 700px) {
   .columns.columns4 {
     flex-direction: column;
@@ -314,7 +312,6 @@
 }
 
 .columns.columns4 > div {
-  /* The "row" inside the block: side by side */
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -322,7 +319,6 @@
   position: relative;
 }
 
-/* Left column: text content */
 .columns.columns4 > div > div {
   flex: 1 1 0;
   display: flex;
@@ -344,7 +340,6 @@
   }
 }
 
-/* Headline styling */
 .columns.columns4 h3 {
   color: #fff;
   font-size: 2.1rem;
@@ -354,7 +349,6 @@
   letter-spacing: 0.01em;
 }
 
-/* Upper label styling */
 .columns.columns4 > div > div > p:first-child {
   text-transform: uppercase;
   font-size: 13px;
@@ -367,7 +361,6 @@
   color: #fff;
 }
 
-/* Subheadline styling */
 .columns.columns4 > div > div > p:last-child {
   color: #fff;
   font-size: 15px;
@@ -377,9 +370,7 @@
   max-width: 420px;
 }
 
-/* Simulated right column: image and divider as pseudo-elements */
 .columns.columns4 > div::after {
-  /* "Image" pseudo-element, visually side by side */
   display: block;
   position: absolute;
   top: 50%;
@@ -406,7 +397,6 @@
   }
 }
 
-/* Divider styling */
 .columns.columns4 > div::before {
   position: absolute;
   top: 38px;
@@ -426,17 +416,193 @@
   }
 }
 
-/* Remove default margins for block elements */
 .columns.columns4 h3,
 .columns.columns4 p {
   margin-top: 0;
   margin-bottom: 0;
 }
 
-/* Ensure proper wrapping for all white text */
 .columns.columns4 p,
 .columns.columns4 h3 {
-  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
-/* Make inner content not stretch too wide */
+
+.columns.columns8 {
+  background: #fff;
+  padding: 0;
+  margin: 0;
+  font-family: var(--body-font-family);
+  min-height: 60px;
+}
+
+/* Three columns: logo | main nav | secondary nav/socials */
+.columns.columns8 > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 60px;
+  padding: 0 32px;
+  box-sizing: border-box;
+  gap: 0;
+}
+
+/* ------------ LOGO COLUMN ------------ */
+.columns.columns8 .columns-img-col:first-of-type {
+  display: flex;
+  align-items: center;
+  min-width: 140px;
+  max-width: 180px;
+  margin-right: 48px;
+}
+
+.columns.columns8 .columns-img-col:first-of-type picture, 
+.columns.columns8 .columns-img-col:first-of-type img {
+  display: block;
+  max-height: 48px;
+  max-width: 138px;
+  width: auto;
+  height: auto;
+}
+
+/* ------------ MAIN NAV COLUMN ------------ */
+
+/* Only style the first child ul as main nav */
+.columns.columns8 > div > div:nth-child(2) > ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.columns.columns8 > div > div:nth-child(2) > ul > li {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  font-family: var(--body-font-family);
+  color: #14213d;
+  font-weight: 400;
+  margin: 0;
+  padding: 0 18px 0 0;
+  white-space: nowrap;
+  position: relative;
+  border-right: none;
+}
+
+/* Dividers only between main nav links */
+.columns.columns8 > div > div:nth-child(2) > ul > li:not(:last-child) {
+  border-right: 1px solid #d8d8d8;
+}
+
+/* Main nav links */
+.columns.columns8 > div > div:nth-child(2) > ul > li > a {
+  color: #14213d;
+  font-size: 13px;
+  font-family: var(--body-font-family);
+  text-decoration: none;
+  padding: 0;
+  font-weight: 400;
+}
+
+/* ------------ SECONDARY NAV & SOCIAL ICONS COLUMN ------------ */
+.columns.columns8 .columns-img-col:last-of-type {
+  display: flex;
+  align-items: center;
+  min-width: 200px;
+  margin-left: 48px;
+  justify-content: flex-end;
+}
+
+.columns.columns8 .columns-img-col:last-of-type ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Secondary nav links: only apply divider between adjacent <a> links */
+.columns.columns8 .columns-img-col:last-of-type ul > li > a {
+  color: #666;
+  font-size: 12px;
+  font-family: var(--body-font-family);
+  text-decoration: none;
+  font-weight: 400;
+  margin-right: 8px;
+  padding: 0;
+}
+
+.columns.columns8 .columns-img-col:last-of-type ul > li > a + a {
+  border-left: 1px solid #d8d8d8;
+  padding-left: 14px;
+}
+
+/* Remove divider after last nav link or between icons */
+.columns.columns8 .columns-img-col:last-of-type ul > li > picture,
+.columns.columns8 .columns-img-col:last-of-type ul > li > img {
+  margin-left: 8px;
+  margin-right: 0;
+}
+
+/* Social icon images: smaller, circular, navy, grouped right */
+.columns.columns8 .columns-img-col:last-of-type ul > li picture img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #14213d;
+  object-fit: contain;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 4px;
+}
+
+/* ------------ RESPONSIVE STACKING ------------ */
+@media (width <= 900px) {
+  .columns.columns8 > div {
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: unset;
+    padding: 0 12px;
+    gap: 8px;
+  }
+
+  .columns.columns8 .columns-img-col:first-of-type,
+  .columns.columns8 > div > div:nth-child(2),
+  .columns.columns8 .columns-img-col:last-of-type {
+    margin: 0 0 12px;
+    min-width: 0;
+    max-width: unset;
+    justify-content: flex-start;
+  }
+
+  .columns.columns8 > div > div:nth-child(2) > ul,
+  .columns.columns8 .columns-img-col:last-of-type ul {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .columns.columns8 > div > div:nth-child(2) > ul > li,
+  .columns.columns8 .columns-img-col:last-of-type ul > li {
+    border-right: none;
+    padding: 2px 0;
+  }
+
+  .columns.columns8 .columns-img-col:last-of-type ul > li picture img {
+    margin-left: 0;
+    margin-top: 8px;
+  }
+}
+
+/* Remove bullets and extra margins from all lists in the block */
+.columns.columns8 ul,
+.columns.columns8 ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
