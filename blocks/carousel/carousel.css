@@ -263,3 +263,102 @@
 .carousel.carousel2 .carousel-navigation-buttons {
   display: none;
 }
+
+
+.carousel.carousel16 .carousel-slide {
+  min-height: 400px;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+}
+
+.carousel.carousel16 .carousel-slide .carousel-slide-image,
+.carousel.carousel16 .carousel-slide .carousel-slide-image picture,
+.carousel.carousel16 .carousel-slide .carousel-slide-image img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+  background: transparent;
+  display: block;
+  z-index: 0;
+}
+
+.carousel.carousel16 .carousel-slide .carousel-slide-content {
+  position: absolute;
+  top: 10px;
+  left: 16px;
+  width: auto;
+  max-width: 52vw;
+  margin: 0;
+  padding: 0;
+  background: none;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.carousel.carousel16 .carousel-slide .carousel-slide-content h2,
+.carousel.carousel16 .carousel-slide .carousel-slide-content h2 a {
+  color: #e0005b;
+  font-size: 26px;
+  font-weight: 700;
+  font-family: var(--heading-font-family);
+  margin: 0 0 8px;
+  line-height: 1.2;
+  text-decoration: none;
+  text-align: left;
+  letter-spacing: 0.01em;
+  background: none;
+  box-shadow: none;
+  max-width: 32vw;
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+.carousel.carousel16 .carousel-slide .carousel-slide-content h2 a:hover {
+  text-decoration: underline;
+}
+
+.carousel.carousel16 .carousel-slide .carousel-slide-content p {
+  color: #222;
+  font-size: 18px;
+  margin: 0;
+  line-height: 1.35;
+  text-align: left;
+  background: none;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  padding: 0;
+  border-radius: 0;
+  text-shadow: none;
+  max-width: 38vw;
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+@media (width <= 800px) {
+  .carousel.carousel16 .carousel-slide .carousel-slide-content {
+    top: 7px;
+    left: 7px;
+    max-width: 90vw;
+  }
+
+  .carousel.carousel16 .carousel-slide .carousel-slide-content h2,
+  .carousel.carousel16 .carousel-slide .carousel-slide-content h2 a {
+    font-size: 18px;
+    max-width: 80vw;
+  }
+
+  .carousel.carousel16 .carousel-slide .carousel-slide-content p {
+    font-size: 13px;
+    max-width: 88vw;
+  }
+}
