@@ -1,7 +1,11 @@
 /* stylelint-disable no-descending-specificity */
 .columns > div {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 36px;
+  padding: 56px 0;
 }
 
 .columns img {
@@ -14,6 +18,16 @@
 
 .columns > div > .columns-img-col {
   order: 0;
+  flex: 0 0 420px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-width: 320px;
+  max-width: 420px;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  background: none;
 }
 
 .columns > div > .columns-img-col img {
@@ -787,14 +801,13 @@
 .columns.columns32 {
   display: flex;
   flex-direction: row;
-  align-items: center; /* Vertically center all columns */
+  align-items: center;
   justify-content: space-between;
   gap: 40px;
-  padding: 24px 0; /* More vertical breathing room */
+  padding: 24px 0;
   background: #fff;
 }
 
-/* Responsive: stack vertically on small screens */
 @media (width <= 700px) {
   .columns.columns32 {
     flex-direction: column;
@@ -804,7 +817,6 @@
   }
 }
 
-/* The direct row container for left+right columns */
 .columns.columns32 > div {
   flex: 1 1 0;
   display: flex;
@@ -814,28 +826,25 @@
   gap: 0;
 }
 
-/* Stack headline and subtext vertically, left-aligned, always vertically centered */
 .columns.columns32 > div > div:first-child {
   flex: 1 1 0;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;  /* Center text block vertically in row */
+  justify-content: center;
   min-width: 0;
 }
 
-/* Headline styling with extra space below */
 .columns.columns32 h4 {
   color: #14295B;
   font-size: 22px;
   font-weight: 400;
   font-family: var(--heading-font-family);
-  margin: 0 0 12px; /* More gap below headline for separation */
+  margin: 0 0 12px;
   line-height: 1.2;
   text-align: left;
 }
 
-/* Subtext styling, with slightly increased size for legibility */
 .columns.columns32 p:not(.button-container) {
   color: #666C77;
   font-size: 13px;
@@ -846,7 +855,6 @@
   text-align: left;
 }
 
-/* Ensure button column is right-aligned and vertically centered */
 .columns.columns32 > div > div:last-child {
   flex: 0 0 auto;
   display: flex;
@@ -855,12 +863,10 @@
   min-width: 180px;
 }
 
-/* Remove default button container margin */
 .columns.columns32 .button-container {
   margin: 0;
 }
 
-/* Button styling override */
 .columns.columns32 .button {
   background: #001D53;
   color: #FFF;
@@ -882,8 +888,119 @@
   display: inline-block;
 }
 
-/* Button hover/focus for accessibility */
 .columns.columns32 .button:hover,
 .columns.columns32 .button:focus {
   background: #14295B;
+}
+
+
+.columns {
+  background: #F6FEFF;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 0;
+}
+
+/* --- IMAGE COLUMN: ensure visible, left, and no border-radius --- */
+
+@media (width <= 900px) {
+  .columns > div {
+    flex-direction: column;
+    gap: 32px;
+    padding: 32px 0;
+    align-items: stretch;
+  }
+
+  .columns > div > .columns-img-col {
+    min-width: 0;
+    max-width: 100%;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+}
+
+/* Ensure the image fills the column and has sharp corners */
+.columns .columns-img-col img,
+.columns .columns-img-col picture {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
+  object-fit: cover;
+}
+
+/* --- TEXT COLUMN: right of image, vertically centered --- */
+.columns > div > div:not(.columns-img-col) {
+  order: 1;
+  flex: 1 1 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  min-width: 300px;
+  max-width: 520px;
+  margin: 0;
+  padding: 0;
+}
+
+.columns h4 {
+  color: #20416e;
+  font-size: 1.75rem;
+  font-weight: 600;
+  font-family: var(--heading-font-family), Arial, sans-serif;
+  margin: 0 0 18px;
+  line-height: 1.2;
+  text-align: left;
+}
+
+.columns p {
+  color: #24374b;
+  font-size: 1rem;
+  font-family: var(--body-font-family), Arial, sans-serif;
+  margin: 0 0 20px;
+  line-height: 1.6;
+  max-width: 38em;
+  text-align: left;
+}
+
+.columns .button-container {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  padding: 0;
+  margin: 0;
+}
+
+.columns .button-container .button {
+  background: transparent;
+  border: 2px solid #20416e;
+  color: #20416e;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border-radius: 999px;
+  padding: 14px 36px;
+  line-height: 1.2;
+  font-family: var(--body-font-family), Arial, sans-serif;
+  box-shadow: none;
+  margin: 0;
+  text-align: left;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.columns .button-container .button:hover,
+.columns .button-container .button:focus {
+  background: #20416e;
+  color: #fff;
+  border-color: #20416e;
+  text-decoration: none;
+}
+
+/* Remove excess vertical space below button */
+.columns .button-container + * {
+  margin-top: 0;
 }
