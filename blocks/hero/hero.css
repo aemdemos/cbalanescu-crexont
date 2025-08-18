@@ -713,12 +713,10 @@
   min-height: unset;
 }
 
-/* Hide the empty first column */
 .hero.hero24 > div:first-child {
   display: none;
 }
 
-/* Center and stretch the content column fully */
 .hero.hero24 > div:nth-child(2) {
   flex: 1 1 0;
   display: flex;
@@ -727,25 +725,11 @@
   width: 100%;
 }
 
-/* Headline styling */
 .hero.hero24 h3 {
-  color: #192B67;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 32px;
-  font-weight: 400;
-  text-align: center;
-  line-height: 1.25;
-  margin: 0;
-  padding: 0;
-  background: none;
-  max-width: none;
-  letter-spacing: normal;
-  word-break: break-word;
-  overflow-wrap: break-word;
-  white-space: pre-line;
-}
+    font-size: 20px;
+    padding: 0 6px;
+  }
 
-/* Responsive adjustments for small screens */
 @media (width <= 600px) {
   .hero.hero24 {
     padding-top: 18px;
@@ -755,5 +739,124 @@
   .hero.hero24 h3 {
     font-size: 20px;
     padding: 0 6px;
+  }
+}
+
+
+.hero.hero31.block {
+  background: #f6fcfc;
+  padding: 48px 0;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero.hero31.block > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 32px;
+}
+
+.hero.hero31.block > div:first-child {
+  /* This is the icon wrapper */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 54px;
+  min-height: 54px;
+  margin-right: 24px;
+}
+
+.hero.hero31.block > div:first-child > div {
+  /* This wraps the <picture> */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  background: #1580ac;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgb(21 128 172 / 8%);
+  overflow: hidden;
+  position: relative;
+}
+
+.hero.hero31.block > div:first-child picture,
+.hero.hero31.block > div:first-child img {
+  display: block;
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+  background: transparent;
+  margin: auto;
+}
+
+.hero.hero31.block > div:last-child {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 650px;
+  width: 100%;
+}
+
+.hero.hero31.block h4 {
+  font-size: 22px;
+  font-weight: 500;
+  color: #1a3441;
+  margin: 0 0 12px;
+  line-height: 1.2;
+  font-family: var(--heading-font-family);
+}
+
+.hero.hero31.block p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #1a3441;
+  margin: 0 0 8px;
+  line-height: 1.6;
+  max-width: 100%;
+}
+
+.hero.hero31.block p:last-child {
+  margin-bottom: 0;
+}
+
+@media (width <= 900px) {
+  .hero.hero31.block > div {
+    margin: 0 16px;
+    max-width: 100%;
+  }
+
+  .hero.hero31.block > div:last-child {
+    max-width: 100%;
+  }
+}
+
+@media (width <= 700px) {
+  .hero.hero31.block {
+    padding: 32px 0;
+  }
+
+  .hero.hero31.block > div {
+    flex-direction: column;
+    align-items: center;
+    margin: 0 8px;
+    gap: 20px;
+  }
+
+  .hero.hero31.block > div:first-child {
+    margin-right: 0;
+    margin-bottom: 16px;
+  }
+
+  .hero.hero31.block > div:last-child {
+    align-items: center;
+    text-align: center;
   }
 }
