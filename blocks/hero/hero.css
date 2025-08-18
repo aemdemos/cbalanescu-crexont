@@ -260,7 +260,6 @@
 
 
 .hero.hero15 {
-  /* Hero card: flex row, centered, balanced padding and background */
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -274,11 +273,8 @@
   position: relative;
   z-index: 1;
   min-height: 320px;
-
-  /* For vertical space in the viewport */
 }
 
-/* Left column: icon/image */
 .hero.hero15 > div:first-child {
   flex: 0 0 auto;
   display: flex;
@@ -287,11 +283,8 @@
   justify-content: flex-start;
   padding-right: 36px;
   padding-left: 12px;
-
-  /* More padding so image is not flush left/top */
 }
 
-/* The icon/picture itself */
 .hero.hero15 > div:first-child picture,
 .hero.hero15 > div:first-child img {
   width: 48px;
@@ -301,14 +294,9 @@
   margin-top: 6px;
   margin-left: 0;
   border-radius: 12px;
-
-  /* for crisp corners if image has background */
   display: block;
-
-  /* avoid baseline alignment issues */
 }
 
-/* Right column: content */
 .hero.hero15 > div:last-child {
   flex: 1 1 0;
   display: flex;
@@ -320,7 +308,6 @@
   min-width: 0;
 }
 
-/* Heading */
 .hero.hero15 h3 {
   color: #fff;
   font-family: var(--heading-font-family);
@@ -331,7 +318,6 @@
   letter-spacing: -0.5px;
 }
 
-/* Description */
 .hero.hero15 p:not(.button-container) {
   color: #fff;
   font-size: 1rem;
@@ -346,7 +332,6 @@
   margin: 0 16px 0 0;
 }
 
-/* Remove margin from last button container */
 .hero.hero15 .button-container:last-of-type {
   margin-right: 0;
 }
@@ -374,7 +359,6 @@
   color: #fff;
 }
 
-/* The second button as a link style */
 .hero.hero15 .button-container + .button-container .button {
   border: none;
   background: none;
@@ -431,5 +415,70 @@
 @media (width <= 450px) {
   .hero.hero15 {
     padding: 18vw 2vw;
+  }
+}
+
+
+.hero.hero17 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: linear-gradient(90deg, #2696a6 0%, #0280bb 45%, #66b6df 100%);
+  border-radius: 24px;
+
+  /* Slightly reduced vertical padding for a more accurate block height */
+  padding: 22px 40px;
+  margin: 40px auto;
+  max-width: 900px;
+  box-sizing: border-box;
+  min-height: 0;
+}
+
+.hero.hero17 > div:first-child {
+  min-width: 36px;
+  width: 36px;
+  margin: 0;
+  padding: 0;
+}
+
+.hero.hero17 > div:last-child {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+/* Reduce heading font size for a closer match to original */
+.hero.hero17 h1,
+.hero.hero17 h2,
+.hero.hero17 h3,
+.hero.hero17 h4,
+.hero.hero17 h5,
+.hero.hero17 h6 {
+  color: #fff;
+  font-family: var(--heading-font-family), Arial, sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  margin: 0;
+  line-height: 1.15;
+}
+
+@media (width <= 600px) {
+  .hero.hero17 {
+    flex-direction: column;
+    padding: 14px 12px;
+    border-radius: 16px;
+    max-width: 100%;
+  }
+
+  .hero.hero17 > div:first-child {
+    min-width: 0;
+    width: 0;
+    height: 10px;
+  }
+
+  .hero.hero17 > div:last-child {
+    width: 100%;
+    justify-content: flex-start;
   }
 }
