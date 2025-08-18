@@ -436,7 +436,6 @@
   min-height: 60px;
 }
 
-/* Three columns: logo | main nav | secondary nav/socials */
 .columns.columns8 > div {
   display: flex;
   flex-direction: row;
@@ -449,7 +448,6 @@
   gap: 0;
 }
 
-/* ------------ LOGO COLUMN ------------ */
 .columns.columns8 .columns-img-col:first-of-type {
   display: flex;
   align-items: center;
@@ -467,9 +465,6 @@
   height: auto;
 }
 
-/* ------------ MAIN NAV COLUMN ------------ */
-
-/* Only style the first child ul as main nav */
 .columns.columns8 > div > div:nth-child(2) > ul {
   display: flex;
   flex-direction: row;
@@ -493,12 +488,10 @@
   border-right: none;
 }
 
-/* Dividers only between main nav links */
 .columns.columns8 > div > div:nth-child(2) > ul > li:not(:last-child) {
   border-right: 1px solid #d8d8d8;
 }
 
-/* Main nav links */
 .columns.columns8 > div > div:nth-child(2) > ul > li > a {
   color: #14213d;
   font-size: 13px;
@@ -508,7 +501,6 @@
   font-weight: 400;
 }
 
-/* ------------ SECONDARY NAV & SOCIAL ICONS COLUMN ------------ */
 .columns.columns8 .columns-img-col:last-of-type {
   display: flex;
   align-items: center;
@@ -526,7 +518,6 @@
   list-style: none;
 }
 
-/* Secondary nav links: only apply divider between adjacent <a> links */
 .columns.columns8 .columns-img-col:last-of-type ul > li > a {
   color: #666;
   font-size: 12px;
@@ -542,14 +533,12 @@
   padding-left: 14px;
 }
 
-/* Remove divider after last nav link or between icons */
 .columns.columns8 .columns-img-col:last-of-type ul > li > picture,
 .columns.columns8 .columns-img-col:last-of-type ul > li > img {
   margin-left: 8px;
   margin-right: 0;
 }
 
-/* Social icon images: smaller, circular, navy, grouped right */
 .columns.columns8 .columns-img-col:last-of-type ul > li picture img {
   width: 32px;
   height: 32px;
@@ -561,7 +550,6 @@
   padding: 4px;
 }
 
-/* ------------ RESPONSIVE STACKING ------------ */
 @media (width <= 900px) {
   .columns.columns8 > div {
     flex-direction: column;
@@ -599,10 +587,137 @@
   }
 }
 
-/* Remove bullets and extra margins from all lists in the block */
 .columns.columns8 ul,
 .columns.columns8 ol {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+
+/* Main columns: keep side by side and vertically centered */
+.columns.columns19 > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 40px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Left column: stack headline and icons row, and center vertically */
+.columns.columns19 > div > div:not(.columns-img-col) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 12px;
+  min-width: 0;
+  height: 100%;
+}
+
+/* Headline styling */
+.columns.columns19 h1 {
+  font-family: var(--heading-font-family);
+  font-size: 2rem;
+  font-weight: 400;
+  color: #1A2A44;
+  margin: 0;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+/* Horizontal icons row: group all icon <p>s into a flex row after the headline */
+
+/* Use a selector for all <p> siblings after h1 inside the left column */
+.columns.columns19 > div > div:not(.columns-img-col) > h1 + p,
+.columns.columns19 > div > div:not(.columns-img-col) > h1 + p + p,
+.columns.columns19 > div > div:not(.columns-img-col) > h1 + p + p + p {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove vertical margin from all icon <p>s */
+.columns.columns19 > div > div:not(.columns-img-col) > p {
+  margin: 0;
+  padding: 0;
+}
+
+/* If the icons are still stacking, try merging all icon <p>s into a single flex row */
+
+.columns.columns19 > div > div:not(.columns-img-col) > h1 ~ p {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Icon containers */
+.columns.columns19 > div > div:not(.columns-img-col) > p picture {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: #1A2A44;
+  border-radius: 4px;
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 32px;
+  overflow: hidden;
+}
+
+/* Icon image styling */
+.columns.columns19 > div > div:not(.columns-img-col) > p picture img {
+  width: 12px;
+  height: 12px;
+  vertical-align: middle;
+  filter: brightness(0) invert(1);
+}
+
+/* Right column: image block */
+.columns.columns19 .columns-img-col {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-width: 0;
+  height: 100%;
+}
+
+.columns.columns19 .columns-img-col picture,
+.columns.columns19 .columns-img-col img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 0;
+  background: transparent;
+  max-width: 100%;
+}
+
+/* Responsive: stack vertically on smaller screens */
+@media (width <= 800px) {
+  .columns.columns19 > div {
+    flex-direction: column;
+    gap: 24px;
+    align-items: flex-start;
+  }
+
+  .columns.columns19 .columns-img-col {
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 0;
+  }
+
+  .columns.columns19 .columns-img-col picture,
+  .columns.columns19 .columns-img-col img {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+  }
 }
