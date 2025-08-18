@@ -545,7 +545,6 @@
   max-width: 100%;
 }
 
-/* Label */
 .hero.hero23 > div:last-child > div > p:nth-child(2) {
   font-size: 1.15rem;
   text-transform: uppercase;
@@ -555,7 +554,6 @@
   margin-bottom: 10px;
 }
 
-/* Headline */
 .hero.hero23 > div:last-child > div > p:nth-child(3) {
   font-size: 4.1rem;
   color: #fff;
@@ -570,7 +568,6 @@
   font-weight: 700;
 }
 
-/* Supporting text */
 .hero.hero23 > div:last-child > div > p:nth-child(4) {
   color: #7ed5f6;
   font-size: 1.12rem;
@@ -579,7 +576,6 @@
   max-width: 850px;
 }
 
-/* Footnotes */
 .hero.hero23 > div:last-child > div > p:nth-child(5),
 .hero.hero23 > div:last-child > div > p:nth-child(6) {
   font-size: 1.01rem;
@@ -588,7 +584,6 @@
   line-height: 1.32;
 }
 
-/* CTA Button */
 .hero.hero23 > div:last-child > div > p:last-child {
   display: inline-flex;
   align-items: center;
@@ -612,7 +607,6 @@
   background: rgb(255 255 255 / 8%);
 }
 
-/* Annotation box placement and style */
 .hero.hero23 > div:last-child > div > p:first-child {
   position: absolute;
   right: 35px;
@@ -636,7 +630,6 @@
   font-weight: 700;
 }
 
-/* Responsive adjustments */
 @media (width <= 1300px) {
   .hero.hero23 > div:last-child {
     padding-left: 32px;
@@ -703,5 +696,64 @@
 
   .hero.hero23 > div:last-child > div > p {
     font-size: 0.98rem;
+  }
+}
+
+
+.hero.hero24 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  padding-top: 36px;
+  padding-bottom: 36px;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: unset;
+}
+
+/* Hide the empty first column */
+.hero.hero24 > div:first-child {
+  display: none;
+}
+
+/* Center and stretch the content column fully */
+.hero.hero24 > div:nth-child(2) {
+  flex: 1 1 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Headline styling */
+.hero.hero24 h3 {
+  color: #192B67;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  text-align: center;
+  line-height: 1.25;
+  margin: 0;
+  padding: 0;
+  background: none;
+  max-width: none;
+  letter-spacing: normal;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  white-space: pre-line;
+}
+
+/* Responsive adjustments for small screens */
+@media (width <= 600px) {
+  .hero.hero24 {
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+
+  .hero.hero24 h3 {
+    font-size: 20px;
+    padding: 0 6px;
   }
 }
