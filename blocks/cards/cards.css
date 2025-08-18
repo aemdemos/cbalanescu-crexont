@@ -618,7 +618,6 @@
   padding: 36px 0;
 }
 
-/* Layout: Two cards side by side using grid, slightly wider cards and more gap */
 .cards.cards35 > ul {
   display: grid;
   grid-template-columns: repeat(2, minmax(360px, 1fr));
@@ -639,7 +638,6 @@
   }
 }
 
-/* Card container: increased top padding, slightly wider */
 .cards.cards35 > ul > li {
   background: #f7fbfd;
   border: 1px solid #e1eff6;
@@ -653,7 +651,6 @@
   min-width: 0;
 }
 
-/* Image: circular, fully left-aligned, a touch more breathing room below */
 .cards.cards35 .cards-card-image {
   margin-bottom: 14px;
   margin-left: 0;
@@ -671,7 +668,6 @@
   display: block;
 }
 
-/* Card Body */
 .cards.cards35 .cards-card-body {
   width: 100%;
   margin: 0;
@@ -681,7 +677,6 @@
   align-items: flex-start;
 }
 
-/* Heading: darker, bolder, slightly larger */
 .cards.cards35 .cards-card-body h3 {
   font-size: 21px;
   font-weight: 700;
@@ -695,7 +690,6 @@
   color: #14304c;
 }
 
-/* Paragraph: blue-gray, relaxed, a bit more space below */
 .cards.cards35 .cards-card-body p {
   font-size: 16px;
   color: #364656;
@@ -707,7 +701,6 @@
   margin: 0;
 }
 
-/* Button: outlined, pill-shaped, flush left, larger and bold */
 .cards.cards35 .cards-card-body .button {
   display: inline-block;
   padding: 10px 26px;
@@ -733,10 +726,159 @@
   border-color: #14304c;
 }
 
-/* Responsiveness for smaller screens */
 @media (width <= 600px) {
   .cards.cards35 > ul > li {
     padding: 28px 8px 16px;
     max-width: 100%;
   }
 }
+
+
+.cards.cards36 {
+  background: #f4feff;
+  padding: 32px 0;
+}
+
+/* Four card grid, responsive */
+.cards.cards36 > ul {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
+  gap: 18px;
+  max-width: 1100px;
+  margin: 0 auto;
+  justify-items: center;
+  padding: 0;
+  list-style: none;
+}
+
+@media (width <= 1100px) {
+  .cards.cards36 > ul {
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    gap: 14px;
+    max-width: 480px;
+  }
+}
+
+@media (width <= 600px) {
+  .cards.cards36 > ul {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    max-width: 98vw;
+  }
+}
+
+/* Card: restore size and padding for content visibility */
+.cards.cards36 > ul > li {
+  position: relative;
+  overflow: visible;
+  border-radius: 14px;
+  min-width: 200px;
+  max-width: 260px;
+  padding-top: 32px;
+  padding-bottom: 10px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  border: 2px solid transparent;
+  box-shadow: none;
+}
+
+/* Pastel borders and gradients for each card, fade color at 55% */
+.cards.cards36 > ul > li:nth-child(1) {
+  border-color: #ffeaa7;
+  background: linear-gradient(180deg, #fffad1 0%, #fff 55%);
+}
+
+.cards.cards36 > ul > li:nth-child(2) {
+  border-color: #b2f2d7;
+  background: linear-gradient(180deg, #eafbed 0%, #fff 55%);
+}
+
+.cards.cards36 > ul > li:nth-child(3) {
+  border-color: #cabcf5;
+  background: linear-gradient(180deg, #f6f2fe 0%, #fff 55%);
+}
+
+.cards.cards36 > ul > li:nth-child(4) {
+  border-color: #ffe6be;
+  background: linear-gradient(180deg, #fff5e2 0%, #fff 55%);
+}
+
+/* Capsule: visible, larger, floats just above card top, soft shadow */
+.cards.cards36 .cards-card-image {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background: none;
+  line-height: 0;
+}
+
+.cards.cards36 .cards-card-image img {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  filter: drop-shadow(0 7px 14px rgb(0 0 0 / 13%));
+  background: none;
+  border-radius: 0;
+}
+
+/* Card body: tight two-column flex, centered */
+.cards.cards36 .cards-card-body {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px 12px 0;
+  gap: 0;
+  min-height: unset;
+}
+
+.cards.cards36 .cards-card-body p {
+  margin: 0;
+  padding: 0;
+  font-family: 'Proxima Nova', Helvetica, Arial, sans-serif;
+  color: #35495e;
+  font-size: 14px;
+  line-height: 1.23;
+  font-weight: 400;
+  flex: 1 1 0;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+
+.cards.cards36 .cards-card-body p strong {
+  color: #06395c;
+  font-size: 19px;
+  font-weight: 700;
+  margin-top: 1.5px;
+  line-height: 1.1;
+}
+
+/* Divider: subtle and tight */
+.cards.cards36 .cards-card-body p:first-child {
+  border-right: 1px solid #e8eaf0;
+  margin-right: 8px;
+  padding-right: 8px;
+  align-items: flex-start;
+}
+
+.cards.cards36 .cards-card-body p:last-child {
+  padding-left: 8px;
+  align-items: flex-start;
+}
+
+/* Remove list marker for safety */
+
+/* Remove all box shadows from card container for flat look */
